@@ -8,14 +8,14 @@ router.get('/',function(req, res){
     res.send("FROM API")
 })
 router.post('/login',(req,res) =>{
-    
+    res.status(200).send("hey")
     console.log('Hey from login')
 })
 
 
 router.post('/register', (req,res) =>{
     let userData = req.body
-    let user = User(userData)
+    let user = userData
     
 
 })

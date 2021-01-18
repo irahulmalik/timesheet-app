@@ -1,1 +1,27 @@
-<p>register works!</p>
+
+<div class="col-xs-12 col-md-6">
+    <h1>Add New User</h1>
+    <div class="registration">
+        <form 
+        #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" placeholder="username">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="password">
+            </div>
+            <div class="form-group">
+                <label for="Name">Full Name</label>
+                <input type="text" class="form-control" id="Name" placeholder="Full Name">
+            </div>
+            <div class="form-group">
+                <label for="Branch">Branch</label>
+                <input type="text" class="form-control" id="Branch" placeholder="Branch">
+            </div>
+            <button type="submit" class="btn btn-primary">Save</button>
+
+        </form>
+    </div>
+</div>

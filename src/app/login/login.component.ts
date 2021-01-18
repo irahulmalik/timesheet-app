@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 
 @Component({
@@ -10,7 +11,8 @@ import { AuthService } from '../auth.service';
 export class LoginComponent implements OnInit{
   name: string;
   password: string;
-  constructor(private auth:AuthService){
+  constructor(private auth:AuthService,
+    private router: Router){
     
   }
   ngOnInit(){
@@ -18,8 +20,16 @@ export class LoginComponent implements OnInit{
   }
 onSubmit(form: NgForm){
   console.log(form.value);
+  let res;
+  if (res = this.auth.login(form.value)){
+    localStorage.setItem('token', res)
+    this.router.navigate(['/addtask'])
+  }
   
-  console.log(this.auth.login(form.value));
+  // this.auth.login(form.value).subscribe(
+  //   res=>console.log(res),
+  //   err => console.log(err)
+  // )
   form.reset();
   // console.log(this.name);
   // console.log(this.password)

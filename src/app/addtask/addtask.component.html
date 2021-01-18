@@ -1,0 +1,17 @@
+<p>addtask works!</p>
+<div class="col-xs-12 col-md-6">
+    <form>
+        <div class="form-group">
+            <label for="task">Task Name:</label>
+            <input list="tasks" name="tasks" id="tasks">
+
+            <datalist id="tasks" *ngFor="let task of tasks; let i = index">
+  <option value="tasks[i].taskname">
+  </datalist>
+  <ul *ngFor="let task of tasks; let i = index">
+      <li>{{tasks[i].taskname}}</li>
+  </ul>
+    <!-- <p>{{tasks}},{{tasks[1].taskname}}</p> -->
+        </div>
+    </form>
+</div>
