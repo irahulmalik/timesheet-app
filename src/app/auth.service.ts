@@ -33,7 +33,8 @@ export class AuthService {
         
         if(this.users[i].password===userdata.Password){
         console.log("True");
-          return Math.random()
+          
+          return [Math.random(),this.users[i].role]
 
       
         }

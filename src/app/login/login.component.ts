@@ -17,12 +17,16 @@ export class LoginComponent implements OnInit{
   }
   ngOnInit(){
     this.onRegister();
+    // location.reload();
   }
+
 onSubmit(form: NgForm){
   console.log(form.value);
   let res;
+  let role: string;
   if (res = this.auth.login(form.value)){
-    localStorage.setItem('token', res)
+    localStorage.setItem('token', res[0])
+    localStorage.setItem('role',res[1])
     this.router.navigate(['/addtask'])
   }
   
