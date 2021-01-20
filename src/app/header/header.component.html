@@ -12,13 +12,13 @@
         </ul>
    
     </div>
-    <div class="collapse navbar-collapse" *ngIf="role ==='Manager'" >
+    <div class="collapse navbar-collapse" *ngIf="role ==='Manager'" open>
       
         <ul class="nav navbar-bar navbar-right">
          
-            <li class="dropdown" >
-                <a role="button" class="dropdown-toggle" data-toggle="dropdown" (click)="onLogout()">Manage<span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu">
+            <li class="dropdown" appDropdown>
+                <a role="button" class="dropdown-toggle" open data-toggle="dropdown" >Manage<span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu" open>
                     <li><a href="#">Branch</a></li>
                     <li><a href="#">Calendar</a></li>
                     <li><a href="#" role="button" (click)="onLogout()" >Logout</a></li>
@@ -26,7 +26,11 @@
             </li>
         </ul>
     </div>
-    
+    <!-- <div class="navbar side-nav">
+        <ul>
+            <li>Branch</li>
+        </ul>
+    </div> -->
 </div>
 </nav>
 

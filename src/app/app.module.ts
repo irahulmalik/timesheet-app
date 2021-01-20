@@ -8,13 +8,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { RegisterComponent } from './register/register.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AddtaskComponent } from './addtask/addtask.component';
+import { DropdownDirective } from './dropdown.directive';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HeaderComponent,
     RegisterComponent,
-    AddtaskComponent
+    AddtaskComponent,
+    DropdownDirective,
   ],
   imports: [
     BrowserModule,
