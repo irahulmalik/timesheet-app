@@ -12,31 +12,23 @@ export class LoginComponent implements OnInit{
   name: string;
   password: string;
   constructor(private auth:AuthService,
-    private router: Router){
-    
-  }
+    private router: Router){}
+
   ngOnInit(){
+    
     this.onRegister();
-    // location.reload();
+
   }
 
 onSubmit(form: NgForm){
   console.log(form.value);
   let res;
-  let role: string;
   if (res = this.auth.login(form.value)){
     localStorage.setItem('token', res[0])
     localStorage.setItem('role',res[1])
     this.router.navigate(['/addtask'])
   }
-  
-  // this.auth.login(form.value).subscribe(
-  //   res=>console.log(res),
-  //   err => console.log(err)
-  // )
   form.reset();
-  // console.log(this.name);
-  // console.log(this.password)
 }
 onRegister(){
   const user={
@@ -46,11 +38,4 @@ onRegister(){
   };
   this.auth.registerUser(user);
 }
-onName(event:Event){
-  this.name = (<HTMLInputElement>event.target).value;
-}
-onPassword(event:Event){
-  this.password = (<HTMLInputElement>event.target).value;
-}
-  
 }

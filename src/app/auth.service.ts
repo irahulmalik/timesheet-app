@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Output } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { user } from './models/user';
 import { HttpClient } from '@angular/common/http';
@@ -18,7 +18,7 @@ export class AuthService {
   // user$: Observable<user> = this.subject.asObservable();
   // isLoggedin$: Observable<boolean> = this.user$.map(user => !!user.username)
   // isLoggedout$: Observable<boolean> = this.user$.map(isLoggedin$ => !isLoggedin$)
-  users: user[] = [];
+  @Output() users: user[] = [];
   newUser: user;
   // private _registrationURL = "http://localhost:3000/api/register"
   // private _loginURL = "http://localhost:3000/api/login"
@@ -27,7 +27,7 @@ export class AuthService {
   login(userdata){
     console.log("hey "+ userdata)
     console.log(userdata.Username, this.users.length)
-
+    console.log(this.users)
     for(let i=0; i<this.users.length ; i++){
       if(this.users[i].username===userdata.Username){
         
@@ -53,14 +53,20 @@ export class AuthService {
     let usern: string =   userdata.Username;
     let pass: string = userdata.Password;
     let Role: string = userdata.Role;
-     
+    console.log(this.users)
     this.newUser = {username: usern,
       password: pass,
       role: Role
     } ;
     this.users.push(this.newUser);
-
-
+    for(let i=0; i<this.users.length ; i++){
+      if(this.users[i].username===userdata.Username){
+          return false
+      } else{
+       
+        return true
+      }
+    }
     // return this.http.post<any>(this._registrationURL,{userdata})
   }
   loggedIn() {
