@@ -1,5 +1,6 @@
 .login-form{
-    background-color: aliceblue;
+    /* background-color: aliceblue; */
+    font-family: 'Lato';
     display: block;
     padding: 10px;
     margin-top: 50px;
@@ -10,11 +11,13 @@
     width: 50vh;
     justify-content: space-around;
     align-items: center;
-    box-shadow: 5px 5px 9px rgb(173, 173, 173);
+    border: 1px solid rgb(160, 206, 214);
+    /* box-shadow: 5px 5px 9px rgb(173, 173, 173); */
 }
 
 .label {
     padding: 5px;
+    margin-top: 10px;
     margin-bottom: 10px;
     width: 100%;
 }
@@ -22,6 +25,7 @@
 .form-group input{
     width: 100%;
     border: none;
+    border-radius: 0;
     border-bottom: 1px solid blue;
     box-shadow: none;
 }
@@ -30,7 +34,7 @@
 }
 .form-group input:focus{
     border: 1px solid blue;
-    background-color: rgb(209, 246, 255);
+    background-color: rgb(239, 252, 255);
     
 }
 .form-group submit-button{

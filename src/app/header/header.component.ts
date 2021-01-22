@@ -32,7 +32,6 @@ export class HeaderComponent implements OnInit {
   onLogout(){
     console.log("logging out")
     localStorage.clear()
-    this.router.navigate(['/login'])
   }
 
 

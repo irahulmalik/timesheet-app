@@ -1,9 +1,10 @@
-import { Injectable, Output } from '@angular/core';
+import { Injectable, Input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { user } from './models/user';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
 
+import { userdetails } from './models/userdetails'
 
 export const Anonymous_User: user = {
   username:undefined,
@@ -18,36 +19,30 @@ export class AuthService {
   // user$: Observable<user> = this.subject.asObservable();
   // isLoggedin$: Observable<boolean> = this.user$.map(user => !!user.username)
   // isLoggedout$: Observable<boolean> = this.user$.map(isLoggedin$ => !isLoggedin$)
-  @Output() users: user[] = [];
+  @Input() users: user[] = [];
   newUser: user;
+  usersd: userdetails[] = []
   // private _registrationURL = "http://localhost:3000/api/register"
   // private _loginURL = "http://localhost:3000/api/login"
   
   constructor(private http: HttpClient) { }
   login(userdata){
-    console.log("hey "+ userdata)
-    console.log(userdata.Username, this.users.length)
     console.log(this.users)
     for(let i=0; i<this.users.length ; i++){
       if(this.users[i].username===userdata.Username){
-        
         if(this.users[i].password===userdata.Password){
-        console.log("True");
-          
           return [Math.random(),this.users[i].role]
-
-      
         }
         else{
-          alert("wrong username or password, Please Try Again")
         }
       }
       else{
+      }
+      if(i+1 == this.users.length){
         alert("wrong username or password, Please Try Again")
       }
     }
     // return this.http.post<any>(this._loginURL,{userdata})
-
   }
   registerUser(userdata){
     let usern: string =   userdata.Username;
@@ -62,8 +57,7 @@ export class AuthService {
     for(let i=0; i<this.users.length ; i++){
       if(this.users[i].username===userdata.Username){
           return false
-      } else{
-       
+      } else{       
         return true
       }
     }
@@ -71,5 +65,38 @@ export class AuthService {
   }
   loggedIn() {
     return !!localStorage.getItem('token')
+  }
+  //user details adding function below
+  addtask(userdata){
+    let username = localStorage.getItem('username')
+    let workdata = {
+      taskName: userdata.taskname,
+      taskCategory: userdata.taskCategory,
+      won: userdata.won,
+      duration: userdata.duration,
+      date: new Date(2020, 11, 22),
+      leave: userdata.leave
+    }
+    let newuserdetal = {
+      username: localStorage.getItem("username"),
+      workdetails: [workdata]
+    }
+    if (this.usersd.length>1){
+      for (let i=0; i<=this.usersd.length; i++){
+        console.log("service called",this.usersd,i, this.usersd.length)
+
+        console.log(this.usersd[i].username)
+        if (this.usersd[i].username === username){
+          console.log("user found")
+          this.usersd[i]?.workdetails.push(workdata)
+          console.log(this.usersd[i])
+          return true
+        }
+      }
+    } else{
+        console.log("adding new user")
+        this.usersd.push(newuserdetal)
+        console.log("data added",this.usersd)
+      }
   }
 }

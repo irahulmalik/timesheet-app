@@ -1,7 +1,6 @@
 <app-header></app-header>
-<div class="col-xs-12 col-md-6">
-    <h1>Add New User</h1>
-    <div class="registration">
+<div class="col-xs-12 col-md-6 form-class">
+        <h1>Add New User</h1>
         <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
             <div class="form-group">
                 <label for="Username">Username</label>
@@ -10,6 +9,10 @@
             <div class="form-group">
                 <label for="Password">Password</label>
                 <input type="password" class="form-control" name ="Password" ngModel required id="Password" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" class="form-control" name ="confirmPassword" ngModel required id="Password" placeholder="Password">
             </div>
             <div class="form-group">
                 <label for="Role">Role</label>
@@ -23,8 +26,12 @@
                 <label for="Branch">Branch</label>
                 <input type="text" class="form-control" id="Branch" placeholder="Branch">
             </div> -->
-            <button type="submit" class="btn btn-primary" [disabled]="!authForm.valid">Save</button>
-
+            <div class="btn-group" role="group">
+                <button type="submit" class="btn btn-success" [disabled]="!authForm.valid">Save</button>
+            <button type="button" class="btn btn-warning" (click)="clear(authForm)" [disabled]="!authForm.valid">Clear</button>
+            
+            </div>
+            
         </form>
-    </div>
+   
 </div>

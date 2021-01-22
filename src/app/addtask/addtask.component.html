@@ -1,17 +1,28 @@
 <app-header></app-header>
-<div class="col-xs-12 col-md-6">
-    <form>
+<div class="col-xs-12 col-md-6 form-class">
+    <form #addtask="ngForm" (ngSubmit)="onaddtask(addtask)">
+        <h1>Add Task</h1>
         <div class="form-group">
-            <label for="task">Task Name:</label>
-            <input list="tasks" name="tasks" id="tasks">
-
-            <datalist id="tasks" *ngFor="let task of tasks; let i = index">
-  <option value="tasks[i].taskname">
-  </datalist>
-  <ul *ngFor="let task of tasks; let i = index">
-      <li>{{tasks[i].taskname}}</li>
-  </ul>
-    <!-- <p>{{tasks}},{{tasks[1].taskname}}</p> -->
+            <label for="taskname" class="form-label">Task Name:</label>
+            <input type="text" class="form-control" name="taskname" ngModel>
+        </div>
+        <div class="form-group">
+            <label for="task" class="form-label">Task Category:</label><br>
+            <select class="form-control" id="tasks" name="taskCategory" ngModel>
+                <option  *ngFor="let task of tasks; let i = index" value="{{tasks[i].taskname}}">{{tasks[i].taskname}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="won" class="form-label">WON: </label>
+            <input class="form-control" type="number" name="won" ngModel>
+        </div>
+        <div class="form-group">
+            <label for="duration" class="form-label">Duration:</label>
+            <input class="form-control" type="number" name="duration" ngModel>
+        </div>
+        <div class="btn-group">
+            <button type="submit" class="btn btn-success">Submit</button>
+            <button type="submit"  class="btn btn-warning mb2">Clear</button>
         </div>
     </form>
 </div>

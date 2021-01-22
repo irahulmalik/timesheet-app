@@ -18,6 +18,14 @@ export class AuthGuard implements CanActivate {
       return false
     }
   }
+  isLoggedin(): boolean{
+    if (this.auth.loggedIn()){
+      this.router.navigate(['/addtask'])
+      return true
+    }else{
+      return false
+    }
+  }
 
 
   

@@ -1,7 +1,11 @@
+<div class="row">
+    <div class="col-xs-12 col-lg-12">
+
+    
 <nav class="navbar navbar-default">
     <div class="container-fluid">
     <div class="navbar-header">
-        <a href="#" class="navbar-brand">TimeSheet</a>
+        <a routerLink="/login" routerLinkActive="active" class="navbar-brand">TimeSheet</a>
        
         <ul class="nav navbar-bar navbar-right" >
             <li><a class="nav-link" *ngIf="role ==='Manager'" routerLink="/register" routerLinkActive="active">Register New User</a></li>
@@ -10,18 +14,23 @@
             
             <li><a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a></li>
         </ul>
+        <ul class="nav navbar-bar navbar-right" *ngIf="role ==='Manager'">
+            
+            <li><a class="nav-link" routerLink="/userDetails" routerLinkActive="active">User Details</a></li>
+        </ul>
    
     </div>
-    <div class="collapse navbar-collapse" *ngIf="role ==='Manager'" open>
+    <div class="collapse navbar-collapse" *ngIf = "islogedIn == true">
       
         <ul class="nav navbar-bar navbar-right">
          
             <li class="dropdown" appDropdown>
-                <a role="button" class="dropdown-toggle" open data-toggle="dropdown" >Manage<span class="caret"></span></a>
+                <a role="button" class="dropdown-toggle" data-toggle="dropdown" >Manage<span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu" open>
-                    <li><a href="/addtask">Add Task</a></li>
-                    <li><a href="#">Branch</a></li>
-                    <li><a href="#" role="button" (click)="onLogout()" >Logout</a></li>
+                    <li><a routerLink="/addtask" >Add Task</a></li>
+                    <li><a routerLink="#">Branch</a></li>
+                    <li><a routerLink="#">Apply for Leave</a></li>
+                    <li><a routerLink="/login" role="button" (click)="onLogout()" >Logout</a></li>
                 </ul>
             </li>
         </ul>
@@ -33,4 +42,6 @@
     </div> -->
 </div>
 </nav>
+</div>
+</div>
 
