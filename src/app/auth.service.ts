@@ -29,7 +29,6 @@ export class AuthService {
   constructor(private http: HttpClient) { }
   login(userdata){
     console.log(this.users)
-    
     for(let i=0; i<this.users.length ; i++){
       if(this.users[i].username===userdata.Username){
         if(this.users[i].password===userdata.Password){
@@ -101,4 +100,9 @@ export class AuthService {
         console.log("data added",this.usersd)
       }
   }
+
+  callapi(){
+    return this.http.get(this.logurl)
+  }
+
 }

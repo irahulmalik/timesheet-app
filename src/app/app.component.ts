@@ -17,6 +17,8 @@ export class AppComponent {
     }
     auth.registerUser(userdata)
   }
-
+  // callAPI(){
+  //   this.auth.callapi().subscribe(val => console.log(val))
+  // }
 
 }

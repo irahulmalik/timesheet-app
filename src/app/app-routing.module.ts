@@ -5,6 +5,7 @@ import { AuthGuard } from "./auth.guard";
 import { LoginComponent } from "./login/login.component";
 import { RegisterComponent } from "./register/register.component";
 import { UserdetailsComponent } from "./userdetails/userdetails.component";
+import { UserdetailsdisplayComponent } from "./userdetails/userdetailsdisplay.component";
 
 const routes: Routes=[
     {
@@ -28,6 +29,10 @@ const routes: Routes=[
     {
         path: 'userDetails',
         component: UserdetailsComponent
+    },
+    {
+        path: 'userdetails/:id',
+        component: UserdetailsdisplayComponent
     }
 ];
 

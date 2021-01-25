@@ -1,7 +1,55 @@
 <app-header></app-header>
-<p>Userdetails works!!</p>
 <div class="row">
-    <div class="col-xs-12 col-md-6">
-        <h1 style="padding-left: 50px;">Hey !!!</h1>
+    <div class="col-xs-12">
+        <!-- <p>{{data[0].id}}</p> -->
+        <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Username</th>
+                <th scope="col">Total Tasks</th>
+                <th scope="col">Details</th>
+                <!-- <th scope="col">Task Name</th>
+                <th scope="col">Task Category</th>
+                <th scope="col">Date</th>
+                <th scope="col">Duration</th>
+                <th scope="col">Leave</th>
+                <th scope="col">Approve</th> -->
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let datas of data; let i = index">
+
+                <th scope="row">{{data[i].id}}</th>
+                <td>{{data[i].username}}</td>
+                <td>{{data[i].workdetails.length}}</td>
+                <td><a role="button" (click)="showdetails(data[i].id)">Details</a></td>
+                <!-- <td>
+                    <table>
+                       <tr *ngFor="let pink of data[i].workdetails; let j = index">
+                        <td>{{data[i].workdetails[j].taskname}}</td>
+                        <td>{{data[i].workdetails[j].taskcategory}}</td>
+                        <td>{{data[i].workdetails[j].date}}</td>
+                        <td>{{data[i].workdetails[j].duration}}</td>
+                        <td>{{data[i].workdetails[j].leave}}</td>
+                       </tr>
+                    </table>
+                  </td> -->
+                <!-- <td>{{data[i].workdetails[i].taskname}}</td>
+                <td>{{data[i].workdetails[i].taskcategory}}</td>
+                <td>{{data[i].workdetails[i].date}}</td>
+                <td>{{data[i].workdetails[i].duration}}</td>
+                <td>{{data[i].workdetails[i].leave}}</td> -->
+                <!-- <td><input type="checkbox" name="name1" />&nbsp;</td> -->
+
+              </tr>
+            </tbody>
+          </table>
+          <button 
+          class="btn btn-success" 
+          style="align-items: center;
+          margin-left: 50vw;
+          margin-top: 20px;
+          ">Save</button>
     </div>
 </div>

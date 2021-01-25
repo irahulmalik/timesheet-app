@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AddtaskComponent } from './addtask/addtask.component';
 import { DropdownDirective } from './dropdown.directive';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
+import { UserdetailsdisplayComponent } from './userdetails/userdetailsdisplay.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +20,7 @@ import { UserdetailsComponent } from './userdetails/userdetails.component';
     AddtaskComponent,
     DropdownDirective,
     UserdetailsComponent,
+    UserdetailsdisplayComponent,
   ],
   imports: [
     BrowserModule,

@@ -7,7 +7,7 @@
     <div class="navbar-header">
         <a routerLink="/login" routerLinkActive="active" class="navbar-brand">TimeSheet</a>
        
-        <ul class="nav navbar-bar navbar-right" >
+        <ul class="nav navbar-nav navbar-right" >
             <li><a class="nav-link" *ngIf="role ==='Manager'" routerLink="/register" routerLinkActive="active">Register New User</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right" *ngIf = "islogedIn == false">

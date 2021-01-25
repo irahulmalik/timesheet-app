@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-userdetails',
@@ -6,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./userdetails.component.css']
 })
 export class UserdetailsComponent implements OnInit {
-
-  constructor() { }
-
+  data : any;
+  constructor(private auth: AuthService,
+    private router: Router) { 
+    auth.callapi().subscribe(val => {
+      this.data = val
+    }) 
+  }
   ngOnInit(): void {
+  }
+  showdetails(id:number){
+    console.log("details",id)
+    this.router.navigate(["/userdetails", id])
   }
 
 }
