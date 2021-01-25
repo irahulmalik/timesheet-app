@@ -24,10 +24,12 @@ export class AuthService {
   usersd: userdetails[] = []
   // private _registrationURL = "http://localhost:3000/api/register"
   // private _loginURL = "http://localhost:3000/api/login"
+  private logurl = "http://localhost:3000/userdetails"
   
   constructor(private http: HttpClient) { }
   login(userdata){
     console.log(this.users)
+    
     for(let i=0; i<this.users.length ; i++){
       if(this.users[i].username===userdata.Username){
         if(this.users[i].password===userdata.Password){
