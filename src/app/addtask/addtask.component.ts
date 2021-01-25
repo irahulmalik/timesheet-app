@@ -59,7 +59,10 @@ export class AddtaskComponent implements OnInit {
     console.log(form.value)
     if (this.auth.addtask(form.value)){
       console.log('data added')
+      alert("Task Added Successfully")
     }
-
+  }
+  clearInfo(form: NgForm){
+    form.reset()
   }
 }

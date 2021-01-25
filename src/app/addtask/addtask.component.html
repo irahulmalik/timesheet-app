@@ -1,6 +1,6 @@
 <app-header></app-header>
 <div class="col-xs-12 col-md-6 form-class">
-    <form #addtask="ngForm" (ngSubmit)="onaddtask(addtask)">
+    <form #addtask="ngForm">
         <h1>Add Task</h1>
         <div class="form-group">
             <label for="taskname" class="form-label">Task Name:</label>
@@ -21,8 +21,8 @@
             <input class="form-control" type="number" name="duration" ngModel>
         </div>
         <div class="btn-group">
-            <button type="submit" class="btn btn-success">Submit</button>
-            <button type="submit"  class="btn btn-warning mb2">Clear</button>
+            <button type="submit" (click)="onaddtask(addtask)" class="btn btn-success">Submit</button>
+            <button type="submit" (click)="clearInfo(addtask)" class="btn btn-warning mb2">Clear</button>
         </div>
     </form>
 </div>

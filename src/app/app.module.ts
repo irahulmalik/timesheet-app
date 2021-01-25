@@ -9,6 +9,7 @@ import { RegisterComponent } from './register/register.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AddtaskComponent } from './addtask/addtask.component';
 import { DropdownDirective } from './dropdown.directive';
+import { UserdetailsComponent } from './userdetails/userdetails.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,6 +18,7 @@ import { DropdownDirective } from './dropdown.directive';
     RegisterComponent,
     AddtaskComponent,
     DropdownDirective,
+    UserdetailsComponent,
   ],
   imports: [
     BrowserModule,

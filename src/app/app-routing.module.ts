@@ -4,6 +4,7 @@ import { AddtaskComponent } from "./addtask/addtask.component";
 import { AuthGuard } from "./auth.guard";
 import { LoginComponent } from "./login/login.component";
 import { RegisterComponent } from "./register/register.component";
+import { UserdetailsComponent } from "./userdetails/userdetails.component";
 
 const routes: Routes=[
     {
@@ -11,17 +12,23 @@ const routes: Routes=[
         component:LoginComponent,
         pathMatch:'full'
     },
-    {path: 'login',
-    component:LoginComponent
+    {
+        path: 'login',
+        component:LoginComponent
     },
-    {path: 'register',
-component: RegisterComponent
-},
-{
-    path: 'addtask',
-    component: AddtaskComponent,
-    canActivate: [AuthGuard]
-}
+    {
+        path: 'register',
+        component: RegisterComponent
+    },
+    {
+        path: 'addtask',
+        component: AddtaskComponent,
+        canActivate: [AuthGuard]
+    },
+    {
+        path: 'userDetails',
+        component: UserdetailsComponent
+    }
 ];
 
 @NgModule({
