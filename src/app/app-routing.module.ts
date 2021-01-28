@@ -2,6 +2,7 @@ import { NgModule } from "@angular/core";
 import { Routes,RouterModule } from "@angular/router";
 import { AddtaskComponent } from "./addtask/addtask.component";
 import { AuthGuard } from "./auth.guard";
+import { BranchComponent } from "./branch/branch.component";
 import { LoginComponent } from "./login/login.component";
 import { RegisterComponent } from "./register/register.component";
 import { UserdetailsComponent } from "./userdetails/userdetails.component";
@@ -28,12 +29,23 @@ const routes: Routes=[
     },
     {
         path: 'userDetails',
-        component: UserdetailsComponent
+        component: UserdetailsComponent,
+        children:[
+            {
+                path: ':id',
+                component: UserdetailsdisplayComponent
+        }
+        ]
     },
     {
         path: 'userdetails/:id',
         component: UserdetailsdisplayComponent
+    },
+    {
+        path: 'branch',
+        component: BranchComponent
     }
+
 ];
 
 @NgModule({

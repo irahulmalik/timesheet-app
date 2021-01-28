@@ -1,0 +1,10 @@
+
+.btn-group{
+    display: flex;
+
+}
+
+form button{
+    margin-bottom: 10px;
+    width: 100%;
+}

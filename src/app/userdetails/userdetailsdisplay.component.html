@@ -1,7 +1,7 @@
 <app-header></app-header>
 <div class="row">
     <div class="col-xs-12">
-        <h1>Task Details of {{data[id].username}}</h1>
+        <h1>Task Details of {{data[id-1].username}}</h1>
         <!-- <p>{{data[0].id}}</p> -->
         <table class="table">
             <thead class="thead-dark">
@@ -18,16 +18,16 @@
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let datas of data[id].workdetails; let i = index">
+              <tr *ngFor="let datas of data[id-1].workdetails; let i = index">
                 <th scope="row">{{data[i].id}}</th>
                 <!-- <td>{{data[id].username}}</td> -->
-                <td>{{data[id].workdetails[i].taskname}}</td>
-                <td>{{data[id].workdetails[i].taskcategory}}</td>
-                <td>{{data[id].workdetails[i].won}}</td>
-                <td>{{data[id].workdetails[i].date}}</td>
-                <td>{{data[id].workdetails[i].duration}}</td>
-                <td>{{data[id].workdetails[i].leave}}</td>
-                 <td><input type="checkbox" name="name1" />&nbsp;</td> 
+                <td>{{data[id-1].workdetails[i].taskname}}</td>
+                <td>{{data[id-1].workdetails[i].taskcategory}}</td>
+                <td>{{data[id-1].workdetails[i].won}}</td>
+                <td>{{data[id-1].workdetails[i].date}}</td>
+                <td>{{data[id-1].workdetails[i].duration}}</td>
+                <td>{{data[id-1].workdetails[i].leave}}</td>
+                <td><input type="checkbox" id="checkbox" name="name1" [(ngModel)]="isChecked"/>&nbsp;</td> 
               </tr>
             </tbody>
           </table>
@@ -36,6 +36,7 @@
           style="align-items: center;
           margin-left: 50vw;
           margin-top: 20px;
-          ">Save</button>
+          "
+          (click)="savedata()">Save</button>
     </div>
 </div>

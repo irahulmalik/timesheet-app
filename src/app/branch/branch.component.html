@@ -1,0 +1,23 @@
+<app-header></app-header>
+<div class="row" style="padding-left: 100px;">
+<div class="col-xs-12 col-md-4 form-class">
+    <form #addtask="ngForm">
+        <h1>Branch Details</h1>
+        <div id="alert" class="alert alert-success hidden" role="alert">
+            <strong>Success!</strong> Data Added.
+          </div>
+        <div class="form-group">
+            <label for="branch" class="form-label">Branch:</label>
+            <input type="text" class="form-control" name="branch" ngModel>
+        </div>
+        <div class="form-group">
+            <label for="location" class="form-label">Location:</label><br>
+            <input type="text" class="form-control" name="location" ngModel>
+        </div>
+        <div class="btn-group">
+            <button type="submit" (click)="onaddtask(addtask)" class="btn btn-success">Submit</button>
+            <button type="submit" (click)="clearInfo(addtask)" class="btn btn-warning mb2">Clear</button>
+        </div>
+    </form>
+</div>
+</div>

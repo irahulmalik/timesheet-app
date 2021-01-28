@@ -2,7 +2,6 @@ import { Injectable, Input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { user } from './models/user';
 import { HttpClient } from '@angular/common/http';
-import { BehaviorSubject, Observable } from 'rxjs';
 
 import { userdetails } from './models/userdetails'
 
@@ -15,20 +14,35 @@ export const Anonymous_User: user = {
   providedIn: 'root'
 })
 export class AuthService {
-  // private subject = new BehaviorSubject<user>(Anonymous_User)
-  // user$: Observable<user> = this.subject.asObservable();
-  // isLoggedin$: Observable<boolean> = this.user$.map(user => !!user.username)
-  // isLoggedout$: Observable<boolean> = this.user$.map(isLoggedin$ => !isLoggedin$)
+
   @Input() users: user[] = [];
   newUser: user;
   usersd: userdetails[] = []
-  // private _registrationURL = "http://localhost:3000/api/register"
-  // private _loginURL = "http://localhost:3000/api/login"
+  
   private logurl = "http://localhost:3000/userdetails"
+  private loginurl = "http://localhost:3000/users"
   
   constructor(private http: HttpClient) { }
   login(userdata){
-    console.log(this.users)
+    // let data = this.http.get(`${this.loginurl}?username=${userdata.Username}`)
+    // data.subscribe(val =>{
+    //   if (val[0].username === userdata.Username){
+    //     if (val[0].passsword === userdata.password){
+    //       console.log("Bye")
+    //       return [Math.random(),val[0].username]
+    //     }
+    //   }else{
+    //     let elem = document.getElementById("alert")
+    //     elem.classList.remove("hidden")
+    //     setTimeout(() =>{
+    //     console.log("HEYYYY")
+    //     elem.classList.add("hidden")
+    //     }, 3000)
+    //   }
+    
+
+
+    // })
     for(let i=0; i<this.users.length ; i++){
       if(this.users[i].username===userdata.Username){
         if(this.users[i].password===userdata.Password){
@@ -40,10 +54,18 @@ export class AuthService {
       else{
       }
       if(i+1 == this.users.length){
-        alert("wrong username or password, Please Try Again")
+        // alert("wrong username or password, Please Try Again")
+        console.log("Why am i here")
+        let elem = document.getElementById("alert")
+        elem.classList.remove("hidden")
+        setTimeout(() =>{
+          
+        elem.classList.add("hidden")
+        }, 3000)
+        
+        
       }
     }
-    // return this.http.post<any>(this._loginURL,{userdata})
   }
   registerUser(userdata){
     let usern: string =   userdata.Username;
@@ -62,7 +84,6 @@ export class AuthService {
         return true
       }
     }
-    // return this.http.post<any>(this._registrationURL,{userdata})
   }
   loggedIn() {
     return !!localStorage.getItem('token')

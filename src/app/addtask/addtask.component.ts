@@ -59,7 +59,13 @@ export class AddtaskComponent implements OnInit {
     console.log(form.value)
     if (this.auth.addtask(form.value)){
       console.log('data added')
-      alert("Task Added Successfully")
+      let elem = document.getElementById("alert")
+        elem.classList.remove("hidden")
+        setTimeout(() =>{
+          
+        elem.classList.add("hidden")
+        }, 3000)
+      // alert("Task Added Successfully")
     }
   }
   clearInfo(form: NgForm){

@@ -8,6 +8,13 @@
 
 body{
  font-family: 'Lato', Arial, Helvetica, sans-serif;
- background-color: azure;
+ background-color: aliceblue;
  font-size: 14px;
+}
+footer{
+    color:red;
+    text-align: center;
+    border: 1px solid black;
+    position: relative;
+
 }

@@ -9,6 +9,7 @@ import { AuthService } from '../auth.service';
 })
 export class UserdetailsdisplayComponent implements OnInit {
   data: any;
+  isChecked: boolean;
   constructor(private route: ActivatedRoute,
     private auth: AuthService) { 
     auth.callapi().subscribe(val => {
@@ -19,6 +20,14 @@ export class UserdetailsdisplayComponent implements OnInit {
   ngOnInit(): void {
     this.id = +this.route.snapshot.params['id']
     console.log(this.id)
+  } 
+  savedata(){
+    
+      var element = <HTMLInputElement> document.getElementById("checkbox");
+      element.disabled = true;
+
   }
+
+
 
 }

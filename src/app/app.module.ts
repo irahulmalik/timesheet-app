@@ -11,6 +11,7 @@ import { AddtaskComponent } from './addtask/addtask.component';
 import { DropdownDirective } from './dropdown.directive';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
 import { UserdetailsdisplayComponent } from './userdetails/userdetailsdisplay.component';
+import { BranchComponent } from './branch/branch.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +22,7 @@ import { UserdetailsdisplayComponent } from './userdetails/userdetailsdisplay.co
     DropdownDirective,
     UserdetailsComponent,
     UserdetailsdisplayComponent,
+    BranchComponent,
   ],
   imports: [
     BrowserModule,

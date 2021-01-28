@@ -1,21 +1,27 @@
 .login-form{
-    background-color: aliceblue;
+    display: block;
+    background-color: #fff;
     font-family: 'Lato';
     display: block;
     padding: 10px;
-    margin-top: 50px;
-    margin-left: 66vh;
-    border-radius: 20px;
+    margin-top: 20vh;
+    margin-left: 35vw;
+    border-radius: 10px;
 
-    height: 50vh;
+    /* height: 50vh; */
     width: 50vh;
     justify-content: space-around;
     align-items: center;
-    border: 1px solid rgb(160, 206, 214);
+    border: 1px solid rgb(175, 169, 169);
     box-shadow: 5px 5px 17px rgb(173, 173, 173);
 }
 .login-form h1{
+    color: #777;
     text-align: center;
+}
+.login-form p{
+    text-align: center;
+    font-size: 18px;
 }
 .label {
     padding: 5px;
@@ -25,6 +31,8 @@
 }
 
 .form-group input{
+    margin-top: 30px;
+    margin-bottom: 30px;
     width: 100%;
     border: none;
     border-radius: 0;
@@ -44,4 +52,16 @@
 }
 button{
     width: 100%;
+}
+
+.login-form a{
+    align-items: center;
+    text-align: center;
+    text-decoration-line:underline;
+
+}
+.form-group a{
+    align-items: center;
+    text-align: center;
+    text-decoration-line:underline;
 }
