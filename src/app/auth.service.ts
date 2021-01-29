@@ -91,18 +91,40 @@ export class AuthService {
   //user details adding function below
   addtask(userdata){
     let username = localStorage.getItem('username')
+    let da = new Date
+    let today= da.getDate()
+    let mon = da.getMonth()+1
+    let yea = da.getFullYear()
     let workdata = {
       taskName: userdata.taskname,
       taskCategory: userdata.taskCategory,
       won: userdata.won,
       duration: userdata.duration,
-      date: new Date(2020, 11, 22),
+      date: new Date(2020, 1, 29),
       leave: userdata.leave
     }
     let newuserdetal = {
+      id : 2,
       username: localStorage.getItem("username"),
       workdetails: [workdata]
     }
+
+    let daaat = this.http.get(`${this.logurl}/1`)
+    let usedata: any;
+    daaat.subscribe(val => {
+      usedata = val
+      usedata.workdetails.push(workdata)
+      newuserdetal = {
+        id: 2,
+        username: 'Ray',
+        workdetails: usedata
+      }
+      //calling patch
+      let sentreq = this.http.patch(`${this.logurl}/1`,newuserdetal)
+      sentreq.subscribe(val =>{
+        return true
+      })
+    })
     if (this.usersd.length>1){
       for (let i=0; i<=this.usersd.length; i++){
         console.log("service called",this.usersd,i, this.usersd.length)
@@ -120,6 +142,8 @@ export class AuthService {
         this.usersd.push(newuserdetal)
         console.log("data added",this.usersd)
       }
+      ///pushin data in json server
+
   }
 
   callapi(){

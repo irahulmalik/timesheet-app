@@ -65,3 +65,7 @@ button{
     text-align: center;
     text-decoration-line:underline;
 }
+
+input.ng-invalid.ng-touched{
+    border: 1px solid red;
+}

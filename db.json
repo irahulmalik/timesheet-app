@@ -1,146 +1,148 @@
 {
-    "users":[
-        {
-            "id":"1",
-            "username":"Rahul",
-            "password":"Malik"
-        },
-        {
-            "id":"2",
-            "username":"Ray",
-            "password":"Malik"
-        },
-        {
-            "id":"3",
-            "username":"Komal",
-            "password":"Komal"
-        },
-        {
-            "id":"4",
-            "username":"Aadhi",
-            "password":"Aadhi"
-        },
-        {
-            "id":"5",
-            "username":"Gayatri",
-            "password":"gayatri"
-        },
-        {
-            "id":"6",
-            "username":"Srinivasan",
-            "password":"srinivasan"
-        },
-        {
-            "id":"7",
-            "username":"Shrikant",
-            "password":"shrikant"
-        },
-        {
-            "id":"8",
-            "username":"Ajay",
-            "password":"ajay"
-        }
-    ],
-    "userdetails":[
-        {
-            "id":"1",
-            "username":"Rahul",
-            "workdetails":[
-                {
-                    "taskname":"Leading Change",
-                    "won":"1003",
-                    "date":"11/2/2012",
-                    "taskcategory":"Audit",
-                    "duration":"9",
-                    "leave": false
-                },
-                {
-                    "taskname":"Creating data",
-                    "won":"1003",
-                    "date":"12/2/2012",
-                    "taskcategory":"Talent and Development",
-                    "duration":"9",
-                    "leave": false
-                },
-                {
-                    "taskname":"",
-                    "won":"",
-                    "date":"",
-                    "taskcategory":"",
-                    "duration":"",
-                    "leave": true
-                }
-
-            ]
-        },
-        {
-            "id":"2",
-            "username":"Ray",
-            "workdetails":[
-                {
-            "taskname":"Leading Change",
-            "won":"1002",
-            "date":"11/2/2013",
-            "taskcategory":"Audit",
-            "duration":"9",
+  "users": [
+    {
+      "id": "1",
+      "username": "Rahul",
+      "password": "Malik"
+    },
+    {
+      "id": "2",
+      "username": "Ray",
+      "password": "Malik"
+    },
+    {
+      "id": "3",
+      "username": "Komal",
+      "password": "Komal"
+    },
+    {
+      "id": "4",
+      "username": "Aadhi",
+      "password": "Aadhi"
+    },
+    {
+      "id": "5",
+      "username": "Gayatri",
+      "password": "gayatri"
+    },
+    {
+      "id": "6",
+      "username": "Srinivasan",
+      "password": "srinivasan"
+    },
+    {
+      "id": "7",
+      "username": "Shrikant",
+      "password": "shrikant"
+    },
+    {
+      "id": "8",
+      "username": "Ajay",
+      "password": "ajay"
+    }
+  ],
+  "userdetails": [
+    {
+      "id": "1",
+      "username": "Rahul",
+      "workdetails": [
+          {
+            "taskname": "Leading Change",
+            "won": "1003",
+            "date": "11/2/2012",
+            "taskcategory": "Audit",
+            "duration": "9",
             "leave": false
-            },
-            {
-                "taskname":"Creating data",
-                "won":"1003",
-                "date":"12/2/2012",
-                "taskcategory":"Talent and Development",
-                "duration":"9",
-                "leave": false
-            },
-            {
-                "taskname":"On-Leave",
-                "won":"",
-                "date":"3/3/2020",
-                "taskcategory":"",
-                "duration":"",
-                "leave": true
-            }
-        ]   
+          },
+          {
+            "taskname": "Creating data",
+            "won": "1003",
+            "date": "12/2/2012",
+            "taskcategory": "Talent and Development",
+            "duration": "9",
+            "leave": false
+          },
+          {
+            "taskname": "",
+            "won": "",
+            "date": "",
+            "taskcategory": "",
+            "duration": "",
+            "leave": true
+          },
+          {
+            "taskName": "ON WORK",
+            "taskCategory": "Defect Prevention",
+            "won": 193,
+            "duration": 8,
+            "date": "2021-02-28T18:30:00.000Z",
+            "leave": true
+          }
+      ]
+    },
+        
+      
+    
+    {
+      "id": "2",
+      "username": "Ray",
+      "workdetails": [
+        {
+          "taskname": "Rahul is on leave",
+          "won": "1002",
+          "date": "11/2/2013",
+          "taskcategory": "Audit",
+          "duration": "9",
+          "leave": false
         },
         {
-            "id":"3",
-            "username":"Komal",
-            "workdetails":[
-                {
-                    "taskname":"Leading Change",
-                    "won":"1002",
-                    "date":"11/2/2013",
-                    "taskcategory":"Audit",
-                    "duration":"9",
-                    "leave": false
-                }
-            ]
-        },
-        {
-            "id":"4",
-            "username":"Gayatri",
-            "workdetails":[]
-        },
-        {
-            "id":"5",
-            "username":"Aadhi",
-            "workdetails":[]
-        },
-        {
-            "id":"6",
-            "username":"Srinivasan",
-            "workdetails":[]
-        },
-        {
-            "id":"7",
-            "username":"Shrikant",
-            "workdetails":[]
-        },
-        {
-            "id":"8",
-            "username":"Ajay",
-            "workdetails":[]
+          "taskname": "Rahul is on leave again",
+          "won": "",
+          "date": "11/2/2013",
+          "taskcategory": "",
+          "duration": "",
+          "leave": true
         }
-    ]
+      ]
+    },
+    {
+      "id": "3",
+      "username": "Komal",
+      "workdetails": [
+        {
+          "taskname": "Leading Change",
+          "won": "1002",
+          "date": "11/2/2013",
+          "taskcategory": "Audit",
+          "duration": "9",
+          "leave": false
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "username": "Gayatri",
+      "workdetails": []
+    },
+    {
+      "id": "5",
+      "username": "Aadhi",
+      "workdetails": []
+    },
+    {
+      "id": "6",
+      "username": "Srinivasan",
+      "workdetails": []
+    },
+    {
+      "id": "7",
+      "username": "Shrikant",
+      "workdetails": []
+    },
+    {
+      "id": "8",
+      "username": "Ajay",
+      "workdetails": []
+    }
+  ]
 }
