@@ -24,10 +24,10 @@
                 <td>{{data[id-1].workdetails[i].taskname}}</td>
                 <td>{{data[id-1].workdetails[i].taskcategory}}</td>
                 <td>{{data[id-1].workdetails[i].won}}</td>
-                <td>{{data[id-1].workdetails[i].date}}</td>
+                <td>{{data[id-1].workdetails[i].date | date:"fullDate"}}</td>
                 <td>{{data[id-1].workdetails[i].duration}}</td>
                 <td>{{data[id-1].workdetails[i].leave}}</td>
-                <td><input type="checkbox" id="checkbox" name="name1" [(ngModel)]="isChecked"/>&nbsp;</td> 
+                <td><input type="checkbox" class="checks" id="checkbox" name="Approve" >&nbsp;</td> 
               </tr>
             </tbody>
           </table>
@@ -37,6 +37,6 @@
           margin-left: 50vw;
           margin-top: 20px;
           "
-          (click)="savedata()">Save</button>
+          (click)="savedata()">Approve</button>
     </div>
 </div>

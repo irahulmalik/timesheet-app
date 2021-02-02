@@ -9,7 +9,6 @@ import { AuthService } from '../auth.service';
 })
 export class UserdetailsdisplayComponent implements OnInit {
   data: any;
-  isChecked: boolean;
   constructor(private route: ActivatedRoute,
     private auth: AuthService) { 
     auth.callapi().subscribe(val => {
@@ -22,10 +21,21 @@ export class UserdetailsdisplayComponent implements OnInit {
     console.log(this.id)
   } 
   savedata(){
-    
-      var element = <HTMLInputElement> document.getElementById("checkbox");
-      element.disabled = true;
 
+      // let elements = <HTMLInputElement>document.getElementsByClassName("checkbox");
+      let eles = <HTMLInputElement><unknown>document.getElementsByClassName('checks');
+      let x = <HTMLInputElement><unknown>document.getElementsByClassName('checks').length;
+      for(let i = 0; i < x; i++){
+        if(eles[i].checked){
+          eles[i].disabled=true
+        }
+        
+        
+      }
+
+      // elements.disabled = true;
+      // Get the element with id="myDIV" (a div), then get all elements inside div with class="example"
+    
   }
 
 

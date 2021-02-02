@@ -14,9 +14,10 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
   }
   onSubmit(form: NgForm){
-     if(this.auth.registerUser(form.value) === true){
-       alert("User added with Username:" + form.value.Username+ " & password:" + form.value.Password)
-     }
+    //  if(this.auth.registerUser(form.value) === true){
+    //    alert("User added with Username:" + form.value.Username+ " & password:" + form.value.Password)
+    //  }
+    this.auth.reggUser(form.value).subscribe()
     form.reset();
     
   }

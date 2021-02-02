@@ -12,16 +12,15 @@
           <!-- <label for="Username">User Name:</label> -->
           <input type="text" autocomplete="off" class="form-control" id="floatingInput" name="Username" placeholder="Username" #username="ngModel" ngModel required>
           <!-- <p>{{name}}</p> -->
-          <span class="help-block" *ngIf="!username.valid && username.touched">Enter value!!</span>
+          <span class="help-block alert-warning" style="color:red" *ngIf="!username.valid && username.touched">Enter value!!</span>
         </div>
         <div class="form-group">
           <!-- <label for="Password">Password</label> -->
           <input type="password" class="form-control" name="Password" id="Password" placeholder="Password" #password="ngModel" ngModel required>
           <!-- <p>{{password}}</p> -->
-          <span class="help-block" *ngIf="!password.valid && password.touched">Enter value!!</span>
+          <span class="help-block alert-warning" style="color:red" *ngIf="!password.valid && password.touched">Enter value!!</span>
         </div>
         
         <button type="submit"  class="btn btn-primary submit-button" [disabled]="!authForm.valid">Submit</button>
-        <a routerLink="">Forgot Password</a>
       </form>
   </div>

@@ -1,5 +1,6 @@
 <app-header></app-header>
-<div class="col-xs-12 col-md-6 form-class">
+<div class="row">
+<div class="col-xs-12 col-sm-6 col-md-6 form-class">
     <form #addtask="ngForm">
         <h1>Add Task</h1>
         <div id="alert" class="alert alert-success hidden" role="alert">
@@ -32,4 +33,28 @@
             <button type="submit" (click)="clearInfo(addtask)" class="btn btn-warning mb2">Clear</button>
         </div>
     </form>
+</div>
+<div class="col-xs-12 col-md-4 col-md-offset-1">
+    <h2>Past Data</h2>
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">TaskName</th>
+            <th scope="col">Date</th>
+            <th scope="col">Copy</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let datas of data[0].workdetails; let i = index">
+
+            <th scope="row">{{data[0].workdetails[i].taskname}}</th>
+            <td>{{data[0].workdetails[i].date}}</td>
+            <!-- <td>{{data[i].workdetails.length}}</td> -->
+            <td><a role="button" (click)="Copydata(data[0].workdetails[i])">Copy this to Today</a></td>
+            
+
+          </tr>
+        </tbody>
+      </table>
+</div>
 </div>

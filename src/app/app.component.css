@@ -1,29 +1,10 @@
 .main_body{
-    /* background-color: aliceblue; */
-    font-size: 14px;
-    
+    font-size: 14px;   
 }
-/* 
-nav{
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 15px;
-    text-align: left;
-    font-size:40px;
-    
-
+.main {
+    margin:auto;
+    padding: 0 0 0 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: aliceblue;
 }
-nav a{
-    text-decoration: none;
-    color:black
-
-}
-nav a:visited{
-    text-decoration: none;
-
-}
-nav ul li{
-    list-style: none;
-    text-decoration: none;
-}
- */

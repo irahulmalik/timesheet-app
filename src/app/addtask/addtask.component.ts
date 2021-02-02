@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { discardPeriodicTasks } from '@angular/core/testing';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 import { task } from '../models/tasks';
+import { UsertaskService } from '../usertask.service';
 
 
 @Component({
@@ -12,8 +14,14 @@ import { task } from '../models/tasks';
 })
 export class AddtaskComponent implements OnInit {
   // tasks: task[] = [];
-  constructor(private auth: AuthService) { }
-  
+  data: any;
+  constructor(private auth: AuthService,
+              private usertask: UsertaskService) { 
+    usertask.getdata().subscribe(val =>{
+      this.data = val
+    })
+  }
+
   tasks: task[] = [
     {
       taskname:"Audits"
@@ -57,18 +65,32 @@ export class AddtaskComponent implements OnInit {
   //addfunction that adds work details
   onaddtask(form: NgForm){
     console.log(form.value)
-    if (this.auth.addtask(form.value)){
+    this.auth.addtask(form.value)
+      let elem = document.getElementById("alert")
+        elem.classList.remove("hidden")
+        setTimeout(() =>{
+        elem.classList.add("hidden")
+        window.location.reload()
+        }, 3000)
+      // alert("Task Added Successfully")
+    
+  }
+  clearInfo(form: NgForm){
+    form.reset()
+  }
+  //copydata function
+  Copydata(wokd){
+    console.log(wokd)
+    this.auth.addtask(wokd)
       console.log('data added')
       let elem = document.getElementById("alert")
         elem.classList.remove("hidden")
         setTimeout(() =>{
-          
         elem.classList.add("hidden")
+        window.location.reload()
         }, 3000)
       // alert("Task Added Successfully")
-    }
-  }
-  clearInfo(form: NgForm){
-    form.reset()
+    
+
   }
 }

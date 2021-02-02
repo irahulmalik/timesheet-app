@@ -26,14 +26,9 @@ export class LoginComponent implements OnInit{
   }
 
 onSubmit(form: NgForm){
-  let res;
-  if (res = this.auth.login(form.value)){
-    localStorage.setItem('token', res[0])
-    localStorage.setItem('role',res[1])
-    localStorage.setItem('username', form.value.Username)
+  if(!!this.auth.loginuser(form.value)){
     this.router.navigate(['/addtask'])
   }
-  form.reset();
 }
 // onRegister(){
 //   const user={

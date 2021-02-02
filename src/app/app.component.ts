@@ -10,15 +10,9 @@ import { AuthService } from './auth.service';
 })
 export class AppComponent {
   title = 'timesheet-app';
-  constructor(private auth: AuthService){
-    let userdata = {Username: "admin",
-      Password: "Admin",
-      Role: "Manager"
-    }
-    auth.registerUser(userdata)
+  constructor(){
+
   }
-  // callAPI(){
-  //   this.auth.callapi().subscribe(val => console.log(val))
-  // }
+ 
 
 }

@@ -20,7 +20,8 @@ const routes: Routes=[
     },
     {
         path: 'register',
-        component: RegisterComponent
+        component: RegisterComponent,
+        canActivate: [AuthGuard]
     },
     {
         path: 'addtask',
@@ -30,6 +31,7 @@ const routes: Routes=[
     {
         path: 'userDetails',
         component: UserdetailsComponent,
+        canActivate: [AuthGuard],
         children:[
             {
                 path: ':id',
@@ -39,11 +41,13 @@ const routes: Routes=[
     },
     {
         path: 'userdetails/:id',
-        component: UserdetailsdisplayComponent
+        component: UserdetailsdisplayComponent,
+        canActivate: [AuthGuard]
     },
     {
         path: 'branch',
-        component: BranchComponent
+        component: BranchComponent,
+        canActivate: [AuthGuard]
     }
 
 ];

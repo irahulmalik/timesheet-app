@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { userdetails } from './models/userdetails'
 
@@ -5,10 +6,10 @@ import { userdetails } from './models/userdetails'
   providedIn: 'root'
 })
 export class UsertaskService {
-  
+  api: string= 'http://localhost:3000/userdetails'
   usersd: userdetails[] = []
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
   addtask(userdata){
     let username = localStorage.getItem('username')
     let workdata = {
@@ -24,12 +25,15 @@ export class UsertaskService {
       console.log("service called")
       if (this.usersd[i].username == username){
         this.usersd[i].workdetails.push(workdata)
-        console.log(this.usersd)
+
         return true
       }
-
-      
     }
+  }
+  getdata(){
+   let currentUser = localStorage.getItem('username')
+   return this.http.get(`${this.api}/?username=${currentUser}`)
+   
 
   }
 }

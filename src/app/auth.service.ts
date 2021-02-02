@@ -1,14 +1,19 @@
 import { Injectable, Input } from '@angular/core';
-import { RouterLink } from '@angular/router';
 import { user } from './models/user';
 import { HttpClient } from '@angular/common/http';
 
 import { userdetails } from './models/userdetails'
+import { ɵELEMENT_PROBE_PROVIDERS__POST_R3__ } from '@angular/platform-browser';
+
+
 
 export const Anonymous_User: user = {
   username:undefined,
   password:'',
   role:''
+}
+export const thisisdata: object={
+  "workdetails": []
 }
 @Injectable({
   providedIn: 'root'
@@ -55,7 +60,6 @@ export class AuthService {
       }
       if(i+1 == this.users.length){
         // alert("wrong username or password, Please Try Again")
-        console.log("Why am i here")
         let elem = document.getElementById("alert")
         elem.classList.remove("hidden")
         setTimeout(() =>{
@@ -66,6 +70,17 @@ export class AuthService {
         
       }
     }
+  }
+  reggUser(userdata){
+    let usern: string =   userdata.Username;
+    let pass: string = userdata.Password;
+    let Role: string = userdata.Role;
+    let NewUser = {
+      username: usern,
+      password: pass,
+      role: Role
+    }
+    return this.http.post(this.loginurl, NewUser)
   }
   registerUser(userdata){
     let usern: string =   userdata.Username;
@@ -91,57 +106,54 @@ export class AuthService {
   //user details adding function below
   addtask(userdata){
     let username = localStorage.getItem('username')
+    let uid = parseInt(localStorage.getItem("id"))
     let da = new Date
     let today= da.getDate()
     let mon = da.getMonth()+1
     let yea = da.getFullYear()
     let workdata = {
-      taskName: userdata.taskname,
-      taskCategory: userdata.taskCategory,
+      taskname: userdata.taskname,
+      taskcategory: userdata.taskCategory,
       won: userdata.won,
       duration: userdata.duration,
-      date: new Date(2020, 1, 29),
+      date: new Date(yea, mon, today),
       leave: userdata.leave
     }
-    let newuserdetal = {
-      id : 2,
-      username: localStorage.getItem("username"),
-      workdetails: [workdata]
-    }
-
-    let daaat = this.http.get(`${this.logurl}/1`)
+    let daaat = this.http.get(`${this.logurl}/${uid}`)
     let usedata: any;
     daaat.subscribe(val => {
       usedata = val
       usedata.workdetails.push(workdata)
-      newuserdetal = {
-        id: 2,
-        username: 'Ray',
-        workdetails: usedata
+      let uploaddata = {
+        "workdetails": 
+          usedata.workdetails
       }
       //calling patch
-      let sentreq = this.http.patch(`${this.logurl}/1`,newuserdetal)
+      let sentreq = this.http.patch(`${this.logurl}/${uid}`,uploaddata)
       sentreq.subscribe(val =>{
         return true
       })
+      return true
     })
-    if (this.usersd.length>1){
-      for (let i=0; i<=this.usersd.length; i++){
-        console.log("service called",this.usersd,i, this.usersd.length)
 
-        console.log(this.usersd[i].username)
-        if (this.usersd[i].username === username){
-          console.log("user found")
-          this.usersd[i]?.workdetails.push(workdata)
-          console.log(this.usersd[i])
-          return true
-        }
-      }
-    } else{
-        console.log("adding new user")
-        this.usersd.push(newuserdetal)
-        console.log("data added",this.usersd)
-      }
+    //old method
+    // if (this.usersd.length>1){
+    //   for (let i=0; i<=this.usersd.length; i++){
+    //     console.log("service called",this.usersd,i, this.usersd.length)
+
+    //     console.log(this.usersd[i].username)
+    //     if (this.usersd[i].username === username){
+    //       console.log("user found")
+    //       this.usersd[i]?.workdetails.push(workdata)
+    //       console.log(this.usersd[i])
+    //       return true
+    //     }
+    //   }
+    // } else{
+    //     console.log("adding new user")
+    //     this.usersd.push(newuserdetal)
+    //     console.log("data added",this.usersd)
+    //   }
       ///pushin data in json server
 
   }
@@ -150,4 +162,29 @@ export class AuthService {
     return this.http.get(this.logurl)
   }
 
+
+
+loginuser(userdata){
+  let res;
+  let data = this.http.get(`${this.loginurl}?username=${userdata.Username}`)
+  // return this.http.get(`http://localhost:3000/users/?username=${userdata.Userame}&&password=${userdata.Password}`)
+  return data.subscribe(val =>{
+    if(val[0].username === userdata.Username && val[0].password == userdata.Password){
+      res = [Math.random(),val[0].username,val[0].role,val[0].id]
+      localStorage.setItem('token', res[0])
+      localStorage.setItem('username',res[1])
+      localStorage.setItem('role', res[2])
+      localStorage.setItem("id",res[3])
+      return true
+    }else{
+      console.log("bb")
+      let elem = document.getElementById("alert")
+      elem.classList.remove("hidden")
+      setTimeout(() =>{
+      elem.classList.add("hidden")
+      }, 3000)
+      return false
+    }
+  })
+}
 }
