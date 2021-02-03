@@ -80,8 +80,21 @@ export class AuthService {
       password: pass,
       role: Role
     }
+    let workdet:{
+      id:number,
+      username:string,
+      workdetails:[{
+        taskname: string,
+        taskcategory: string,
+        won: number,
+        duration: number,
+        date: Date,
+        leave: boolean
+      }]
+    }
     return this.http.post(this.loginurl, NewUser)
   }
+  //oldregmethod
   registerUser(userdata){
     let usern: string =   userdata.Username;
     let pass: string = userdata.Password;

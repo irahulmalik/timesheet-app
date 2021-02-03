@@ -18,7 +18,6 @@ export class UserdetailsComponent implements OnInit {
   ngOnInit(): void {
   }
   showdetails(id:number){
-    console.log("details",id)
     this.router.navigate(["/userdetails", id])
   }
 
