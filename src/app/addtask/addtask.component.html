@@ -18,7 +18,8 @@
         </div>
         <div class="form-group">
             <label for="won" class="form-label">WON: </label>
-            <input class="form-control" type="number" name="won" ngModel>
+            <input class="form-control" type="number" name="won" required ngModel>
+
         </div>
         <div class="form-group">
             <label for="duration" class="form-label">Duration:</label>
@@ -48,7 +49,7 @@
           <tr *ngFor="let datas of data[0].workdetails; let i = index">
 
             <th scope="row">{{data[0].workdetails[i].taskname}}</th>
-            <td>{{data[0].workdetails[i].date}}</td>
+            <td>{{data[0].workdetails[i].date | date:"shortDate"}}</td>
             <!-- <td>{{data[i].workdetails.length}}</td> -->
             <td><a role="button" (click)="Copydata(data[0].workdetails[i])">Copy this to Today</a></td>
             

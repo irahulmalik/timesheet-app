@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { discardPeriodicTasks } from '@angular/core/testing';
-import { NgForm } from '@angular/forms';
-import { Router } from '@angular/router';
+import { NgForm, NgModel } from '@angular/forms';
 import { AuthService } from '../auth.service';
 import { task } from '../models/tasks';
 import { UsertaskService } from '../usertask.service';

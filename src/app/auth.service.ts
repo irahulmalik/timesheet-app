@@ -122,7 +122,7 @@ export class AuthService {
     let uid = parseInt(localStorage.getItem("id"))
     let da = new Date
     let today= da.getDate()
-    let mon = da.getMonth()+1
+    let mon = da.getMonth()
     let yea = da.getFullYear()
     let workdata = {
       taskname: userdata.taskname,

@@ -118,14 +118,6 @@
           "duration": 9,
           "date": "2021-02-28T18:30:00.000Z",
           "leave": ""
-        },
-        {
-          "taskname": "Presentation",
-          "taskcategory": "Consultancy",
-          "won": 134,
-          "duration": 9,
-          "date": "2021-03-01T18:30:00.000Z",
-          "leave": ""
         }
       ]
     },
@@ -156,6 +148,13 @@
           "taskcategory": "",
           "duration": "",
           "leave": true
+        },
+        {
+          "taskname": "Creating data",
+          "won": "1003",
+          "duration": "9",
+          "date": "2021-03-04T18:30:00.000Z",
+          "leave": false
         }
       ]
     },
