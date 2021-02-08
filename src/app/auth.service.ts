@@ -1,10 +1,8 @@
 import { Injectable, Input } from '@angular/core';
-import { user } from './models/user';
 import { HttpClient } from '@angular/common/http';
 
+import { user } from './models/user';
 import { userdetails } from './models/userdetails'
-import { ɵELEMENT_PROBE_PROVIDERS__POST_R3__ } from '@angular/platform-browser';
-
 
 
 export const Anonymous_User: user = {
@@ -29,25 +27,6 @@ export class AuthService {
   
   constructor(private http: HttpClient) { }
   login(userdata){
-    // let data = this.http.get(`${this.loginurl}?username=${userdata.Username}`)
-    // data.subscribe(val =>{
-    //   if (val[0].username === userdata.Username){
-    //     if (val[0].passsword === userdata.password){
-    //       console.log("Bye")
-    //       return [Math.random(),val[0].username]
-    //     }
-    //   }else{
-    //     let elem = document.getElementById("alert")
-    //     elem.classList.remove("hidden")
-    //     setTimeout(() =>{
-    //     console.log("HEYYYY")
-    //     elem.classList.add("hidden")
-    //     }, 3000)
-    //   }
-    
-
-
-    // })
     for(let i=0; i<this.users.length ; i++){
       if(this.users[i].username===userdata.Username){
         if(this.users[i].password===userdata.Password){
@@ -59,15 +38,11 @@ export class AuthService {
       else{
       }
       if(i+1 == this.users.length){
-        // alert("wrong username or password, Please Try Again")
         let elem = document.getElementById("alert")
         elem.classList.remove("hidden")
         setTimeout(() =>{
-          
         elem.classList.add("hidden")
-        }, 3000)
-        
-        
+        }, 3000)        
       }
     }
   }
@@ -80,20 +55,21 @@ export class AuthService {
       password: pass,
       role: Role
     }
-    let workdet:{
-      id:number,
-      username:string,
-      workdetails:[{
-        taskname: string,
-        taskcategory: string,
-        won: number,
-        duration: number,
-        date: Date,
-        leave: boolean
-      }]
-    }
+   
     return this.http.post(this.loginurl, NewUser)
   }
+
+  //making userdetails for new user
+  newUserWork(nid:number, username){
+    let workdet = {
+      id: nid,
+      username: username,
+      workdetails:[
+    ]
+    } 
+    this.http.post(this.logurl, workdet).subscribe(res =>{console.log(res)})
+  }
+
   //oldregmethod
   registerUser(userdata){
     let usern: string =   userdata.Username;
