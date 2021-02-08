@@ -27,7 +27,10 @@ export class LoginComponent implements OnInit{
 
 onSubmit(form: NgForm){
   if(!!this.auth.loginuser(form.value)){
-    this.router.navigate(['/addtask'])
+    setTimeout(() =>{
+      this.router.navigate(['/addtask'])
+    }, 1000)
+    
   }
 }
 // onRegister(){
