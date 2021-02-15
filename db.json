@@ -47,6 +47,42 @@
       "username": "Ajay",
       "password": "ajay",
       "role": "User"
+    },
+    {
+      "username": "Akshay",
+      "password": "Akshay",
+      "role": "User",
+      "id": "XLErMYO"
+    },
+    {
+      "username": "Thiligaraj",
+      "password": "Thili",
+      "role": "User",
+      "id": "4DzaFIF"
+    },
+    {
+      "username": "Ajay",
+      "password": "Ajay",
+      "role": "User",
+      "id": "np6iKQ0"
+    },
+    {
+      "username": "Ajay",
+      "password": "ajay",
+      "role": "User",
+      "id": "gaz_2UN"
+    },
+    {
+      "username": "Blim",
+      "password": "Blim",
+      "role": "User",
+      "id": "4QPBuCS"
+    },
+    {
+      "username": "Ajay",
+      "password": "User",
+      "role": "User",
+      "id": "JuMvGLJ"
     }
   ],
   "userdetails": [
@@ -100,6 +136,14 @@
           "duration": 9,
           "date": "2021-02-10T18:30:00.000Z",
           "leave": ""
+        },
+        {
+          "taskname": null,
+          "taskcategory": null,
+          "won": null,
+          "duration": null,
+          "date": "2021-02-14T18:30:00.000Z",
+          "leave": null
         }
       ]
     },
@@ -144,6 +188,21 @@
           "duration": "",
           "date": "2021-02-10T18:30:00.000Z",
           "leave": true
+        },
+        {
+          "taskname": "Demo Presentation",
+          "taskcategory": "Talent and Development",
+          "won": 1043,
+          "duration": 9,
+          "date": "2021-02-14T18:30:00.000Z",
+          "leave": ""
+        },
+        {
+          "taskname": "Demo Presentation",
+          "won": 1043,
+          "duration": 9,
+          "date": "2021-02-14T18:30:00.000Z",
+          "leave": ""
         }
       ]
     },
@@ -253,6 +312,36 @@
           "leave": true
         }
       ]
+    },
+    {
+      "id": "XLErMYO",
+      "username": "Akshay",
+      "workdetails": []
+    },
+    {
+      "id": "4DzaFIF",
+      "username": "Thiligaraj",
+      "workdetails": []
+    },
+    {
+      "id": "np6iKQ0",
+      "username": "Ajay",
+      "workdetails": []
+    },
+    {
+      "id": "gaz_2UN",
+      "username": "Ajay",
+      "workdetails": []
+    },
+    {
+      "id": "4QPBuCS",
+      "username": "Blim",
+      "workdetails": []
+    },
+    {
+      "id": "JuMvGLJ",
+      "username": "Ajay",
+      "workdetails": []
     }
   ]
 }

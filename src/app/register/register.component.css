@@ -1,6 +1,5 @@
 form{
     font-family: 'Lato',Arial, Helvetica, sans-serif;
-
 }
 form h1{
     text-align: center;
@@ -9,11 +8,6 @@ form h1{
 .form-class{
     align-items: center;
     padding-left: 100px;
-    /* border: 1px solid black; */
-    /* border-radius: 5px; */
-    /* box-shadow: 1px 1px 1px rgb(202, 202, 202); */
-
-    
 }
 
 .form-group input{
@@ -21,9 +15,12 @@ form h1{
 }
 .btn-group{
     display: flex;
-
 }
 form button{
     margin-bottom: 10px;
     width: 50%;
+}
+
+small{
+    margin-bottom: 10px;
 }

@@ -3,6 +3,11 @@
     display: flex;
 
 }
+.form-class {
+    padding-top: 10px;
+    padding-left: 8%;
+    padding-right: 5%;
+}
 
 form button{
     margin-bottom: 10px;
