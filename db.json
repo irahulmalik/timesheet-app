@@ -47,66 +47,6 @@
       "username": "Ajay",
       "password": "ajay",
       "role": "User"
-    },
-    {
-      "id": 49,
-      "username": "Rakk",
-      "password": "Rakk",
-      "role": "User"
-    },
-    {
-      "username": "King",
-      "password": "King",
-      "role": "User",
-      "id": 50
-    },
-    {
-      "username": "Akshay",
-      "password": "Kumar",
-      "role": "User",
-      "id": 51
-    },
-    {
-      "username": "Raja",
-      "password": "Malik",
-      "role": "User",
-      "id": 52
-    },
-    {
-      "username": "Kim",
-      "password": "Kim",
-      "role": "User",
-      "id": 53
-    },
-    {
-      "username": "Kylie",
-      "password": "Jenner",
-      "role": "User",
-      "id": 54
-    },
-    {
-      "username": "KimK",
-      "password": "KIMK",
-      "role": "User",
-      "id": 55
-    },
-    {
-      "username": "Kanye",
-      "password": "Kanye",
-      "role": "User",
-      "id": 56
-    },
-    {
-      "username": "Drake",
-      "password": "Drake",
-      "role": "User",
-      "id": 57
-    },
-    {
-      "username": "drizzy",
-      "password": "User",
-      "role": "User",
-      "id": 58
     }
   ],
   "userdetails": [
@@ -131,21 +71,6 @@
           "leave": false
         },
         {
-          "taskname": "Buzzdown",
-          "won": "213",
-          "date": "8/1/2019",
-          "taskcategory": "",
-          "duration": "",
-          "leave": false
-        },
-        {
-          "taskname": "Buzzdown",
-          "won": "213",
-          "duration": "",
-          "date": "2021-02-28T18:30:00.000Z",
-          "leave": false
-        },
-        {
           "taskname": "Project task",
           "taskcategory": "Talent and Development",
           "won": 102,
@@ -159,6 +84,21 @@
           "won": 102,
           "duration": 9,
           "date": "2021-02-28T18:30:00.000Z",
+          "leave": ""
+        },
+        {
+          "taskname": "",
+          "taskcategory": "",
+          "won": 43234246246,
+          "duration": 9,
+          "date": "2021-02-10T18:30:00.000Z",
+          "leave": ""
+        },
+        {
+          "taskname": "Project task",
+          "won": 102,
+          "duration": 9,
+          "date": "2021-02-10T18:30:00.000Z",
           "leave": ""
         }
       ]
@@ -197,6 +137,13 @@
           "duration": "9",
           "date": "2021-03-04T18:30:00.000Z",
           "leave": false
+        },
+        {
+          "taskname": "On Leave",
+          "won": "",
+          "duration": "",
+          "date": "2021-02-10T18:30:00.000Z",
+          "leave": true
         }
       ]
     },
@@ -304,62 +251,6 @@
           "taskcategory": "",
           "duration": "",
           "leave": true
-        }
-      ]
-    },
-    {
-      "id": "9",
-      "username": "Killer",
-      "workdetails": [
-        {
-          "taskname": "",
-          "taskcategory": "",
-          "duration": "8",
-          "won": "231"
-        }
-      ]
-    },
-    {
-      "username": "Kim",
-      "workdetails": [],
-      "id": "bMBK3dC"
-    },
-    {
-      "username": "Kylie",
-      "workdetails": [],
-      "id": "VtjkdvF"
-    },
-    {
-      "username": "KimK",
-      "workdetails": [],
-      "id": "WHtduJ7"
-    },
-    {
-      "username": "Kanye",
-      "workdetails": [],
-      "id": "oLdVQi6"
-    },
-    {
-      "username": "Kanye",
-      "workdetails": [],
-      "id": "4XVX03Y"
-    },
-    {
-      "username": "Drake",
-      "workdetails": [],
-      "id": "Qw7xhbf"
-    },
-    {
-      "id": 58,
-      "username": "drizzy",
-      "workdetails": [
-        {
-          "taskname": "Project task",
-          "taskcategory": "Defect Prevention",
-          "won": 3129,
-          "duration": 9,
-          "date": "2021-02-07T18:30:00.000Z",
-          "leave": ""
         }
       ]
     }

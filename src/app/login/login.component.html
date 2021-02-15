@@ -1,26 +1,30 @@
-<!-- <app-header></app-header> -->
+<div class="cover">
 <div class="login-form">
-
     <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
       <h1>TimeSheet</h1>
+      
+      <hr>
+      <p>Log in to use TimeSheet</p>
       <div id="alert" class="alert alert-warning hidden" role="alert">
         <strong>Warning!</strong> Wrong Username or Password.
       </div>
-      <hr>
-        <div class="form-group">
-          <p>Log in to TimeSheet</p>
-          <!-- <label for="Username">User Name:</label> -->
-          <input type="text" autocomplete="off" class="form-control" id="floatingInput" name="Username" placeholder="Username" #username="ngModel" ngModel required>
-          <!-- <p>{{name}}</p> -->
-          <span class="help-block alert-warning" style="color:red" *ngIf="!username.valid && username.touched">Enter value!!</span>
-        </div>
-        <div class="form-group">
-          <!-- <label for="Password">Password</label> -->
+      <div class="form-grp">
+        <mat-form-field>
+          <input matInput name="Username" id="username" autocomplete="off" placeholder="Username"  ngModel required>
+          <mat-error> Enter Username</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput type="password" name="Password" id="Password" placeholder="Password" #password="ngModel" ngModel required>
+          <mat-error >Enter Password</mat-error>
+        </mat-form-field>
+      </div>
+        <!-- <div class="form-group">
           <input type="password" class="form-control" name="Password" id="Password" placeholder="Password" #password="ngModel" ngModel required>
-          <!-- <p>{{password}}</p> -->
-          <span class="help-block alert-warning" style="color:red" *ngIf="!password.valid && password.touched">Enter value!!</span>
-        </div>
-        
-        <button type="submit"  class="btn btn-primary submit-button" [disabled]="!authForm.valid">Submit</button>
+        </div>  
+        <span class="help-block" *ngIf="!password.valid && password.touched">Enter value!!</span>
+              -->
+        <!-- <button type="submit" mat-raised-button class="btn btn-primary submit-button" [disabled]="!authForm.valid">Submit</button> -->
+        <button type="submit" mat-raised-button  color="Primary" [disabled]="!authForm.valid">Submit</button>
       </form>
   </div>
+</div>

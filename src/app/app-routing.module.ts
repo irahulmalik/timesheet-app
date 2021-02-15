@@ -32,12 +32,12 @@ const routes: Routes=[
         path: 'userDetails',
         component: UserdetailsComponent,
         canActivate: [AuthGuard],
-        children:[
-            {
-                path: ':id',
-                component: UserdetailsdisplayComponent
-        }
-        ]
+        // children:[
+        //     {
+        //         path: ':id',
+        //         component: UserdetailsdisplayComponent
+        // }
+        // ]
     },
     {
         path: 'userdetails/:id',
