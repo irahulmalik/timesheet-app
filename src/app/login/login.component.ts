@@ -33,6 +33,11 @@ onSubmit(form: NgForm){
     
   }
 }
+
+// showPassword(){
+//   let elem = <InnerHTML>document.getElementsByName("password")
+//   if (elem.)
+// }
 // onRegister(){
 //   const user={
 //     Username: "Rahul",

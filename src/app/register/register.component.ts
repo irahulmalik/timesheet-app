@@ -8,7 +8,7 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-
+  public alerterror = 'hidden'
   constructor(private auth: AuthService) { }
 
   ngOnInit(): void {
@@ -17,11 +17,15 @@ export class RegisterComponent implements OnInit {
     //  if(this.auth.registerUser(form.value) === true){
     //    alert("User added with Username:" + form.value.Username+ " & password:" + form.value.Password)
     //  }
-    this.auth.reggUser(form.value).subscribe(
-      val =>{
-        this.auth.newUserWork(val.id , val.username)
+    this.auth.reggUser(form.value).subscribe(val =>{
+        // this.auth.newUserWork(val.id , val.username)
+        this.auth.newUserWork(val)
       }
     )
+    this.alerterror = 'visible'
+    setTimeout(() =>{
+      this.alerterror = 'hidden'
+      }, 3000)     
     form.reset();
     
   }

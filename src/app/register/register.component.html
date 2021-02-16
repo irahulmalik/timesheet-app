@@ -1,6 +1,11 @@
 <app-header></app-header>
 <div class="col-xs-12 col-md-6 form-class">
         <h1>Add New User</h1>
+        
+        <div id="alert" [style.visibility]="alerterror" class="alert alert-success" role="alert">
+            <strong>Success!</strong> New User Added.
+          </div>
+          <small>Add a new user to timesheet app</small>
         <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
             <div class="form-group">
                 <label for="Username">Username</label>

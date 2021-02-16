@@ -60,10 +60,10 @@ export class AuthService {
   }
 
   //making userdetails for new user
-  newUserWork(nid:number, username){
+  newUserWork(userdata){
     let workdet = {
-      id: nid,
-      username: username,
+      id: userdata.id,
+      username: userdata.username,
       workdetails:[
     ]
     } 
