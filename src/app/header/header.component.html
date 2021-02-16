@@ -13,7 +13,7 @@
                     <li><a routerLink="/addtask"><i class="fas fa-plus"></i> Add Task</a></li>
                     <li><a routerLink="/branch"><i class="fas fa-home"></i> Branch</a></li>
                     <li><a class="nav-link" *ngIf="role ==='Manager'" routerLink="/register" routerLinkActive="active"><i class="fas fa-user-plus"></i> Register New User</a></li>
-                    <li><a class="nav-link" *ngIf="role ==='Manager'" outerLink="/userDetails" routerLinkActive="active"><i class="fas fa-users"></i> User Details</a></li>
+                    <li><a class="nav-link" *ngIf="role ==='Manager'" routerLink="/userDetails" routerLinkActive="active"><i class="fas fa-users"></i> User Details</a></li>
                     <li><a routerLink="/login" role="button" (click)="onLogout()"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
                 </ul>
             </li>

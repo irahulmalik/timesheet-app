@@ -10,30 +10,29 @@ export class UsertaskService {
   usersd: userdetails[] = []
 
   constructor(private http: HttpClient) { }
-  addtask(userdata){
-    let username = localStorage.getItem('username')
-    let workdata = {
-      taskName: userdata.taskname,
-      taskCategory: userdata.taskCategory,
-      won: userdata.won,
-      duration: userdata.duration,
-      date: new Date(2020, 11, 22),
-      leave: userdata.leave
-    }
+  // addtask(userdata){
+  //   let username = localStorage.getItem('username')
+  //   let workdata = {
+  //     taskName: userdata.taskname,
+  //     taskCategory: userdata.taskCategory,
+  //     won: userdata.won,
+  //     duration: userdata.duration,
+  //     date: new Date(2020, 11, 22),
+  //     leave: userdata.leave
+  //   }
     
-    for (let i=0; i<=this.usersd.length; i++){
-      console.log("service called")
-      if (this.usersd[i].username == username){
-        this.usersd[i].workdetails.push(workdata)
+  //   for (let i=0; i<=this.usersd.length; i++){
+  //     console.log("service called")
+  //     if (this.usersd[i].username == username){
+  //       this.usersd[i].workdetails.push(workdata)
 
-        return true
-      }
-    }
-  }
+  //       return true
+  //     }
+  //   }
+  // }
   getdata(){
    let currentUser = localStorage.getItem('username')
    return this.http.get(`${this.api}/?username=${currentUser}`)
-   
-
+  
   }
 }

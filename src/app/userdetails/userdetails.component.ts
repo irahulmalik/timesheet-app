@@ -20,5 +20,10 @@ export class UserdetailsComponent implements OnInit {
   showdetails(id:number){
     this.router.navigate(["/userdetails", id])
   }
+  deleteUser(id: number){
+    this.auth.delUser(id).subscribe(res =>{
+      console.log(res)
+    })
+  }
 
 }

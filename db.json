@@ -37,12 +37,6 @@
       "role": "Manager"
     },
     {
-      "id": "7",
-      "username": "Shrikant",
-      "password": "shrikant",
-      "role": "User"
-    },
-    {
       "id": "8",
       "username": "Ajay",
       "password": "ajay",
@@ -79,10 +73,16 @@
       "id": "4QPBuCS"
     },
     {
-      "username": "Ajay",
-      "password": "User",
+      "username": "Akshay",
+      "password": "Akshay",
       "role": "User",
-      "id": "JuMvGLJ"
+      "id": "sRaFByr"
+    },
+    {
+      "username": "Ajay",
+      "password": "Ajay",
+      "role": "User",
+      "id": "2dU3SZY"
     }
   ],
   "userdetails": [
@@ -144,6 +144,28 @@
           "duration": null,
           "date": "2021-02-14T18:30:00.000Z",
           "leave": null
+        },
+        {
+          "taskname": "",
+          "taskcategory": "",
+          "won": "",
+          "duration": 9,
+          "date": "2021-02-14T18:30:00.000Z",
+          "leave": true
+        },
+        {
+          "taskname": "",
+          "won": "",
+          "duration": 9,
+          "date": "2021-02-14T18:30:00.000Z",
+          "leave": true
+        },
+        {
+          "taskname": "",
+          "won": "",
+          "duration": 9,
+          "date": "2021-02-14T18:30:00.000Z",
+          "leave": true
         }
       ]
     },
@@ -194,6 +216,21 @@
           "taskcategory": "Talent and Development",
           "won": 1043,
           "duration": 9,
+          "date": "2021-02-14T18:30:00.000Z",
+          "leave": ""
+        },
+        {
+          "taskname": "Demo Presentation",
+          "won": 1043,
+          "duration": 9,
+          "date": "2021-02-14T18:30:00.000Z",
+          "leave": ""
+        },
+        {
+          "taskname": "Presentation",
+          "taskcategory": "Talent and Development",
+          "won": 1043,
+          "duration": 3,
           "date": "2021-02-14T18:30:00.000Z",
           "leave": ""
         },
@@ -340,6 +377,16 @@
     },
     {
       "id": "JuMvGLJ",
+      "username": "Ajay",
+      "workdetails": []
+    },
+    {
+      "id": "sRaFByr",
+      "username": "Akshay",
+      "workdetails": []
+    },
+    {
+      "id": "2dU3SZY",
       "username": "Ajay",
       "workdetails": []
     }

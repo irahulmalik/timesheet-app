@@ -176,4 +176,8 @@ loginuser(userdata){
     }
   })
 }
+
+delUser(id){
+  return this.http.delete(`${this.loginurl}/${id}`)
+}
 }
