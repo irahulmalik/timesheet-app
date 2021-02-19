@@ -18,31 +18,47 @@ const routes: Routes=[
         path: 'login',
         component:LoginComponent
     },
+    //lazy loading this module
+    // {
+    //     path: 'register',
+    //     component: RegisterComponent,
+    //     canActivate: [AuthGuard]
+    // },
     {
         path: 'register',
-        component: RegisterComponent,
+        loadChildren: () => import('./register/register.module').then(m => m.RegisterModule),
         canActivate: [AuthGuard]
     },
+    //lazy loading this component below
+    // {
+    //     path: 'addtask',
+    //     component: AddtaskComponent,
+    //     canActivate: [AuthGuard]
+    // },
     {
         path: 'addtask',
-        component: AddtaskComponent,
+        loadChildren: () => import('./addtask/addtask.module').then(m => m.AddTaskModule),
         canActivate: [AuthGuard]
     },
-    {
-        path: 'userDetails',
-        component: UserdetailsComponent,
-        canActivate: [AuthGuard],
+    // {
+    //     path: 'userDetails',
+    //     component: UserdetailsComponent,
+    //     canActivate: [AuthGuard],
         // children:[
         //     {
         //         path: ':id',
         //         component: UserdetailsdisplayComponent
         // }
         // ]
-    },
+    // },
     {
         path: 'userdetails/:id',
         component: UserdetailsdisplayComponent,
         canActivate: [AuthGuard]
+    },
+    {
+        path: 'userDetails',
+        loadChildren: () => import('./userdetails/userdetails.module').then(m => m.UserDetailsModule)
     },
     {
         path: 'branch',

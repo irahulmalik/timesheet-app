@@ -11,7 +11,7 @@ form{
 
 .form-class{
     align-items: center;
-    padding-left: 8%;
+    padding-left: 3%;
     padding-right: 5%;
 }
 .form-group select{
@@ -31,13 +31,18 @@ form button{
     padding: 10px 20px 30px 40px;
 }
 
-.userdata{
-    padding-top: 10px;
-    margin-right: 5%;
-    margin-left: 6%;
-    height: 450px;
-    overflow-y: scroll;
-    /* box-shadow: 0 0 10px gainsboro; */
+
+.table th{
+    text-align: center;
+}
+.table td{
+    text-align: center;
 }
 
-
+.tableHeading {
+    display: flex;
+}
+.tableHeading h3 {
+    display: flex;
+    width: 90px;
+}

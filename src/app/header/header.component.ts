@@ -30,6 +30,7 @@ export class HeaderComponent implements OnInit {
   }
   
   onLogout(){
+    this.auth.logChecker.next(false)
     console.log("logging out")
     localStorage.clear()
   }

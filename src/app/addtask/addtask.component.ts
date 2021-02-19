@@ -15,9 +15,9 @@ export class AddtaskComponent implements OnInit {
   data: any;
   constructor(private auth: AuthService,
               private usertask: UsertaskService) { 
-    usertask.getdata().subscribe(val =>{
-      this.data = val
-    })
+    // usertask.getdata().subscribe(val =>{
+    //   this.data = val
+    // })
   }
 
   tasks: task[] = [
@@ -59,6 +59,9 @@ export class AddtaskComponent implements OnInit {
     }
   ]
   ngOnInit(): void {
+    this.usertask.getdata().subscribe(val =>{
+      this.data = val
+    })
   }
   //addfunction that adds work details
   onaddtask(form: NgForm){
@@ -68,10 +71,12 @@ export class AddtaskComponent implements OnInit {
         elem.classList.remove("hidden")
         setTimeout(() =>{
         elem.classList.add("hidden")
-        window.location.reload()
+        // window.location.reload()
         }, 3000)
       // alert("Task Added Successfully")
-    
+      this.usertask.getdata().subscribe(val =>{
+        this.data = val
+      })
   }
   clearInfo(form: NgForm){
     form.reset()
@@ -88,7 +93,5 @@ export class AddtaskComponent implements OnInit {
         window.location.reload()
         }, 3000)
       // alert("Task Added Successfully")
-    
-
   }
 }

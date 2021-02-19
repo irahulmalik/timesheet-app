@@ -11,6 +11,7 @@ export class AuthGuard implements CanActivate {
     private router: Router ){}
   canActivate(): boolean{
     if (this.auth.loggedIn()){
+      this.auth.logChecker.next(true)
       return true
     }
     else{

@@ -1,5 +1,6 @@
 import { getAttrsForDirectiveMatching } from '@angular/compiler/src/render3/view/util';
-import { Component} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+
 import { AuthService } from './auth.service';
 
 @Component({
@@ -8,11 +9,17 @@ import { AuthService } from './auth.service';
   styleUrls: ['./app.component.css']
 
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'timesheet-app';
-  constructor(){
-
+  loggedin: boolean = false;
+  constructor(private auth: AuthService){
+    
   }
- 
+  ngOnInit(){
+    this.auth.logChecker.subscribe(res => {
+      this.loggedin = res
+    })
+  }
+  
 
 }

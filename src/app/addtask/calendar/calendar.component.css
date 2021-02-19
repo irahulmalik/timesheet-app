@@ -1,0 +1,34 @@
+
+div.holiday {
+    -webkit-text-decoration-line: overline; 
+    text-decoration-line: overline; 
+    Color: rgb(52, 150, 241);
+    border-top: 1px solid rgb(52, 150, 241);
+    border-bottom: 1px solid rgb(52, 150, 241);
+    size: 20px;;
+ }
+
+ div.filled {
+    -webkit-text-decoration-line: overline; 
+    text-decoration-line: overline; 
+    Color: green;
+    border-top: 1px solid green;
+    border-bottom: 1px solid green;
+ }
+
+
+ div.notFilled {
+    -webkit-text-decoration-line: overline; 
+    text-decoration-line: overline; 
+    Color: red;
+    border-top: 1px solid red;
+    border-bottom: 1px solid red;
+ }
+
+ div.leave {
+    -webkit-text-decoration-line: overline; 
+    text-decoration-line: overline; 
+    Color: purple;
+    border-top: 1px solid purple;
+    border-bottom: 1px solid purple;
+ }

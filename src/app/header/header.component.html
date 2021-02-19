@@ -18,20 +18,20 @@
                 </ul>
             </li>
         </ul>
-        <ul class="nav navbar-nav navbar-right menu">
+        <ul class="nav navbar-nav navbar-right navbar-link menu">
             <li><a routerLink="/login" role="button" (click)="onLogout()"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
         </ul>
-        <ul class="nav navbar-nav navbar-right menu">
+        <ul class="nav navbar-nav navbar-right navbar-link menu">
             <li><a routerLink="/branch" routerLinkActive="active"><i class="fas fa-home"></i> Your Branch</a></li>
         </ul>
-        <ul class="nav navbar-nav navbar-right menu" >
+        <ul class="nav navbar-nav navbar-right navbar-link menu" >
             <li><a class="nav-link" *ngIf="role ==='Manager'" routerLink="/register" routerLinkActive="active"><i class="fas fa-user-plus"></i> Register New User</a></li>
         </ul>
-        <ul class="nav navbar-nav navbar-right menu" *ngIf="role ==='Manager'">
+        <ul class="nav navbar-nav navbar-right menu navbar-link" *ngIf="role ==='Manager'">
             <li><a class="nav-link" routerLink="/userDetails" routerLinkActive="active"><i class="fas fa-users"></i> User Details</a></li>
         </ul>
         
-        <ul class="nav navbar-nav navbar-right menu">
+        <ul class="nav navbar-nav navbar-right navbar-link menu">
             <li><a routerLink="/addtask" routerLinkActive="active"><i class="fas fa-plus"></i> Add Task</a></li>
         </ul>
         

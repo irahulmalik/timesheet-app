@@ -7,12 +7,6 @@
       "role": "Manager"
     },
     {
-      "id": "2",
-      "username": "Ray",
-      "password": "Malik",
-      "role": "User"
-    },
-    {
       "id": "3",
       "username": "Komal",
       "password": "Komal",
@@ -41,48 +35,6 @@
       "username": "Ajay",
       "password": "ajay",
       "role": "User"
-    },
-    {
-      "username": "Akshay",
-      "password": "Akshay",
-      "role": "User",
-      "id": "XLErMYO"
-    },
-    {
-      "username": "Thiligaraj",
-      "password": "Thili",
-      "role": "User",
-      "id": "4DzaFIF"
-    },
-    {
-      "username": "Ajay",
-      "password": "Ajay",
-      "role": "User",
-      "id": "np6iKQ0"
-    },
-    {
-      "username": "Ajay",
-      "password": "ajay",
-      "role": "User",
-      "id": "gaz_2UN"
-    },
-    {
-      "username": "Blim",
-      "password": "Blim",
-      "role": "User",
-      "id": "4QPBuCS"
-    },
-    {
-      "username": "Akshay",
-      "password": "Akshay",
-      "role": "User",
-      "id": "sRaFByr"
-    },
-    {
-      "username": "Ajay",
-      "password": "Ajay",
-      "role": "User",
-      "id": "2dU3SZY"
     }
   ],
   "userdetails": [
@@ -93,7 +45,7 @@
         {
           "taskname": "Leading Change",
           "won": "1003",
-          "date": "11/2/2012",
+          "date": "2021-02-15",
           "taskcategory": "Audit",
           "duration": "9",
           "leave": false
@@ -101,7 +53,7 @@
         {
           "taskname": "Creating data",
           "won": "1003",
-          "date": "12/2/2012",
+          "date": "2021-02-16",
           "taskcategory": "Talent and Development",
           "duration": "9",
           "leave": false
@@ -110,8 +62,8 @@
           "taskname": "Project task",
           "taskcategory": "Talent and Development",
           "won": 102,
-          "duration": 9,
-          "date": "2021-02-28T18:30:00.000Z",
+          "duration": 4,
+          "date": "2021-02-17",
           "leave": ""
         },
         {
@@ -119,7 +71,7 @@
           "taskcategory": "Talent and Development",
           "won": 102,
           "duration": 9,
-          "date": "2021-02-28T18:30:00.000Z",
+          "date": "2021-02-18",
           "leave": ""
         },
         {
@@ -127,118 +79,23 @@
           "taskcategory": "",
           "won": 43234246246,
           "duration": 9,
-          "date": "2021-02-10T18:30:00.000Z",
+          "date": "2021-2-22",
+          "leave": ""
+        },
+        {
+          "taskname": "Today",
+          "taskcategory": "",
+          "won": 1043,
+          "duration": 9,
+          "date": "2021-02-15T18:30:00.000Z",
           "leave": ""
         },
         {
           "taskname": "Project task",
-          "won": 102,
-          "duration": 9,
-          "date": "2021-02-10T18:30:00.000Z",
-          "leave": ""
-        },
-        {
-          "taskname": null,
-          "taskcategory": null,
-          "won": null,
-          "duration": null,
-          "date": "2021-02-14T18:30:00.000Z",
-          "leave": null
-        },
-        {
-          "taskname": "",
           "taskcategory": "",
-          "won": "",
-          "duration": 9,
-          "date": "2021-02-14T18:30:00.000Z",
-          "leave": true
-        },
-        {
-          "taskname": "",
-          "won": "",
-          "duration": 9,
-          "date": "2021-02-14T18:30:00.000Z",
-          "leave": true
-        },
-        {
-          "taskname": "",
-          "won": "",
-          "duration": 9,
-          "date": "2021-02-14T18:30:00.000Z",
-          "leave": true
-        }
-      ]
-    },
-    {
-      "id": "2",
-      "username": "Ray",
-      "workdetails": [
-        {
-          "taskname": "Leading Change",
-          "won": "1003",
-          "date": "11/2/2012",
-          "taskcategory": "Audit",
-          "duration": "9",
-          "leave": false
-        },
-        {
-          "taskname": "Creating data",
-          "won": "1003",
-          "date": "12/2/2012",
-          "taskcategory": "Talent and Development",
-          "duration": "9",
-          "leave": false
-        },
-        {
-          "taskname": "On Leave",
-          "won": "",
-          "date": "09/29/2020",
-          "taskcategory": "",
-          "duration": "",
-          "leave": true
-        },
-        {
-          "taskname": "Creating data",
-          "won": "1003",
-          "duration": "9",
-          "date": "2021-03-04T18:30:00.000Z",
-          "leave": false
-        },
-        {
-          "taskname": "On Leave",
-          "won": "",
-          "duration": "",
-          "date": "2021-02-10T18:30:00.000Z",
-          "leave": true
-        },
-        {
-          "taskname": "Demo Presentation",
-          "taskcategory": "Talent and Development",
-          "won": 1043,
-          "duration": 9,
-          "date": "2021-02-14T18:30:00.000Z",
-          "leave": ""
-        },
-        {
-          "taskname": "Demo Presentation",
-          "won": 1043,
-          "duration": 9,
-          "date": "2021-02-14T18:30:00.000Z",
-          "leave": ""
-        },
-        {
-          "taskname": "Presentation",
-          "taskcategory": "Talent and Development",
-          "won": 1043,
-          "duration": 3,
-          "date": "2021-02-14T18:30:00.000Z",
-          "leave": ""
-        },
-        {
-          "taskname": "Demo Presentation",
-          "won": 1043,
-          "duration": 9,
-          "date": "2021-02-14T18:30:00.000Z",
+          "won": 104,
+          "duration": 4,
+          "date": "2021-02-18T18:30:00.000Z",
           "leave": ""
         }
       ]
@@ -250,7 +107,7 @@
         {
           "taskname": "Leading Change",
           "won": "1002",
-          "date": "11/2/2013",
+          "date": "11/2/2021",
           "taskcategory": "Audit",
           "duration": "9",
           "leave": false
@@ -260,7 +117,7 @@
           "taskcategory": "Infrastructure Management",
           "won": 123,
           "duration": 9,
-          "date": "2020-02-28T18:30:00.000Z",
+          "date": "2/23/2021",
           "leave": ""
         },
         {
@@ -287,7 +144,7 @@
         {
           "taskname": "On Leave",
           "won": "",
-          "date": "09/29/2020",
+          "date": "02/14/2021",
           "taskcategory": "",
           "duration": "",
           "leave": true
@@ -301,7 +158,7 @@
         {
           "taskname": "On Leave",
           "won": "",
-          "date": "09/29/2020",
+          "date": "02/17/2021",
           "taskcategory": "",
           "duration": "",
           "leave": true
@@ -349,46 +206,6 @@
           "leave": true
         }
       ]
-    },
-    {
-      "id": "XLErMYO",
-      "username": "Akshay",
-      "workdetails": []
-    },
-    {
-      "id": "4DzaFIF",
-      "username": "Thiligaraj",
-      "workdetails": []
-    },
-    {
-      "id": "np6iKQ0",
-      "username": "Ajay",
-      "workdetails": []
-    },
-    {
-      "id": "gaz_2UN",
-      "username": "Ajay",
-      "workdetails": []
-    },
-    {
-      "id": "4QPBuCS",
-      "username": "Blim",
-      "workdetails": []
-    },
-    {
-      "id": "JuMvGLJ",
-      "username": "Ajay",
-      "workdetails": []
-    },
-    {
-      "id": "sRaFByr",
-      "username": "Akshay",
-      "workdetails": []
-    },
-    {
-      "id": "2dU3SZY",
-      "username": "Ajay",
-      "workdetails": []
     }
   ]
 }

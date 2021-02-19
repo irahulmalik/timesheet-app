@@ -12,6 +12,7 @@ import { AuthService } from '../auth.service';
 export class LoginComponent implements OnInit{
   name: string;
   password: string;
+  hide = true;
   constructor(private auth:AuthService,
     private router: Router){
       if (auth.loggedIn()){
@@ -26,12 +27,24 @@ export class LoginComponent implements OnInit{
   }
 
 onSubmit(form: NgForm){
-  if(!!this.auth.loginuser(form.value)){
-    setTimeout(() =>{
-      this.router.navigate(['/addtask'])
-    }, 1000)
+  // if(!!this.auth.loginuser(form.value)){
+  //   setTimeout(() =>{
+  //     this.router.navigate(['/addtask'])
+  //   }, 20)
     
-  }
+  // }
+  this.auth.loginuser(form.value).subscribe(res => {
+    if (res[0] ){
+      res = [Math.random(),res[0].username,res[0].role,res[0].id]
+      localStorage.setItem('token', res[0])
+      localStorage.setItem('username',res[1])
+      localStorage.setItem('role', res[2])
+      localStorage.setItem("id",res[3])
+      this.router.navigate(['/addtask'])
+    }else{
+      console.log("user not Found")
+    }
+  })
 }
 
 // showPassword(){

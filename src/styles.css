@@ -11,15 +11,16 @@ body{
  font-family: 'Lato', Arial, Helvetica, sans-serif;
  font-size: 14px;
  /* background-image: url("https://images.unsplash.com/photo-1499377193864-82682aefed04?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1061&q=80") ; */
- background-color: #777;
+ /* background-color: rgb(255, 249, 230); */
+ /* background-color: teal;
  background-position: center;
  background-repeat: no-repeat;
- background-size: cover;
+ background-size: cover; */
+ background: #777;
  
 }
 footer{
     color:#777;
     text-align: center;
+    background-color: #f1e4e1;
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
