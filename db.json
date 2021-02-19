@@ -7,6 +7,12 @@
       "role": "Manager"
     },
     {
+      "id": "2",
+      "username": "Ray",
+      "password": "Malik",
+      "role": "User"
+    },
+    {
       "id": "3",
       "username": "Komal",
       "password": "Komal",
@@ -97,6 +103,20 @@
           "duration": 4,
           "date": "2021-02-18T18:30:00.000Z",
           "leave": ""
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "username": "Ray",
+      "workdetails": [
+        {
+          "taskname": "Making Calendar",
+          "won": "1230",
+          "date": "02/17/2021",
+          "taskcategory": "Training and Development",
+          "duration": "9",
+          "leave": true
         }
       ]
     },

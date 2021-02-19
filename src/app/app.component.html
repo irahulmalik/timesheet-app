@@ -1,4 +1,7 @@
-<div class="main">
+<div class="my-overlay" *ngIf="showOverlay">
+    <mat-spinner mode="indeterminate"></mat-spinner>
+  </div>
+<div class="main" *ngIf="!showOverlay">
     <app-header *ngIf="loggedin"></app-header>
     <router-outlet></router-outlet>
 </div>

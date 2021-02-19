@@ -46,3 +46,8 @@ form button{
     display: flex;
     width: 90px;
 }
+.calendarapp {
+    padding-top: 10px;
+    padding-left: 20%;
+    align-items: center;
+}

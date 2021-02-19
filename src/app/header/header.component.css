@@ -36,11 +36,12 @@ nav{
     color: #fff;
 } */
 nav{
-    background-color: #bac4f2;
+    background-color: rgb(129, 129, 241);
 }
 .navbar-header a{
     transition: all 0.4s;
     transform: scale(1);
+    color: white;
 }
 
 .navbar-header a:hover{
@@ -74,12 +75,14 @@ nav{
 @media screen and (max-width: 992px){
     .manage {
         display: block;
+        color:white;
     }
     .menu{
         display: none;
     }
     .mobilemenu {
         display: inline;
+        color:white;
     }
     .navbar-header{
         transition: none;

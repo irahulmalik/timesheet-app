@@ -10,32 +10,6 @@ import { UsertaskService } from 'src/app/usertask.service';
   templateUrl: './calendar.component.html',
   styleUrls: ['./calendar.component.css']
 })
-// export class CalendarComponent implements OnInit {
-//   today = new Date();
-//   calendarOptions: CalendarOptions = {
-//     initialView: 'datGridMonth',
-//     dateClick: this.handleDateClick.bind(this),
-//     events: [
-//       {
-//         daysOfWeek: [0,6],
-//         bgColor: "blue",
-//         overlap: false
-//       }
-//     ]
-//   };
-//   constructor() { }
-
-//   ngOnInit(): void {
-//   }
-//   handleDateClick(arg){
-//     if(arg.dateStr === this.today){
-//       alert('Timesheet filled');
-//     }else{
-//       alert('Timesheet for future is frozen'+ arg.dateStr)
-//     }
-//   }
-
-// }
 export class CalendarComponent implements OnInit{
   today=new Date();
   dates : Array<{title:string,date: Date}>=[]
