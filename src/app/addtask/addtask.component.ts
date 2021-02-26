@@ -1,5 +1,6 @@
 import { Component,  OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 import { task } from '../models/tasks';
 import { UsertaskService } from '../usertask.service';
@@ -13,8 +14,10 @@ import { UsertaskService } from '../usertask.service';
 export class AddtaskComponent implements OnInit {
   // tasks: task[] = [];
   data: any;
+  showAlert: boolean = false;
   constructor(private auth: AuthService,
-              private usertask: UsertaskService) { 
+              private usertask: UsertaskService,
+              private router:Router) { 
     // usertask.getdata().subscribe(val =>{
     //   this.data = val
     // })
@@ -67,13 +70,10 @@ export class AddtaskComponent implements OnInit {
   onaddtask(form: NgForm){
     console.log(form.value)
     this.auth.addtask(form.value)
-      let elem = document.getElementById("alert")
-        elem.classList.remove("hidden")
+        this.showAlert = true;
         setTimeout(() =>{
-        elem.classList.add("hidden")
-        // window.location.reload()
+          this.showAlert = false
         }, 3000)
-      // alert("Task Added Successfully")
       this.usertask.getdata().subscribe(val =>{
         this.data = val
       })
@@ -86,12 +86,11 @@ export class AddtaskComponent implements OnInit {
     console.log(wokd)
     this.auth.addtask(wokd)
       console.log('data added')
-      let elem = document.getElementById("alert")
-        elem.classList.remove("hidden")
+        this.showAlert = true;
         setTimeout(() =>{
-        elem.classList.add("hidden")
-        window.location.reload()
+        this.showAlert = false
+        this.router.navigate(['addtask'])
         }, 3000)
-      // alert("Task Added Successfully")
+
   }
 }

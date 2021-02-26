@@ -12,7 +12,7 @@ import { AuthService } from '../auth.service';
 export class LoginComponent implements OnInit{
   name: string;
   password: string;
-  hide = true;
+  showalert = false;
   constructor(private auth:AuthService,
     private router: Router){
       if (auth.loggedIn()){
@@ -21,18 +21,9 @@ export class LoginComponent implements OnInit{
     }
 
   ngOnInit(){
-    
-    // this.onRegister();
-
   }
 
 onSubmit(form: NgForm){
-  // if(!!this.auth.loginuser(form.value)){
-  //   setTimeout(() =>{
-  //     this.router.navigate(['/addtask'])
-  //   }, 20)
-    
-  // }
   this.auth.loginuser(form.value).subscribe(res => {
     if (res[0] ){
       res = [Math.random(),res[0].username,res[0].role,res[0].id]
@@ -42,6 +33,10 @@ onSubmit(form: NgForm){
       localStorage.setItem("id",res[3])
       this.router.navigate(['/addtask'])
     }else{
+      this.showalert = true;
+      setTimeout(() => {
+        this.showalert = false
+      }, 3000);
       console.log("user not Found")
     }
   })

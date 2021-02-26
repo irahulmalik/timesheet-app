@@ -3,13 +3,13 @@
 }
 .main {
     /* background-color: rgb(255, 249, 230); */
-    background-color: #f1e4e1;
+    /* background-color: #f1e4e1; */
+    background-color: #fffbfb;
     padding: 0;
     margin:0;
     width: 100%;
     height: 100vh;
     transition: translateY(100px) 1s ease-in;
-
 }
 
 footer {
@@ -23,7 +23,9 @@ footer {
     height: 100%;
     position: fixed;
     /* background-color: rgba(0,0,0,0.9) !important; */
-    background-color: #f1e4e1;
+    /* background-color: #f1e4e1; */
+    /* background-color: #f3f0f0; */
+    background-color: #fffbfb;
     cursor: pointer ;
     visibility: visible ;
     transition: visibility 0s, opacity 0.1s linear;

@@ -1,7 +1,7 @@
 <!-- <app-header></app-header> -->
 <div class="row">
     <div class="col-xs-12 col-md-10 mytable">
-      <h2>User Details</h2>
+      <h1>User Details</h1>
       <p>List of all users</p>
         <!-- <p>{{data[0].id}}</p> -->
         <table class="table">
@@ -21,7 +21,7 @@
                 <th scope="row">{{i +1}}</th>
                 <td>{{data[i].username}}</td>
                 <td>{{data[i].workdetails.length}}</td>
-                <td><a role="button" (click)="showdetails(data[i].id)">Details</a></td>
+                <td><a role="button" routerlinkActive="active"(click)="showdetails(data[i].id)">Details</a></td>
                 <td><a role="button" (click)="deleteUser(data[i].id)">Delete User</a></td>
                 <td><a role="button">Show Info</a></td>
               </tr>

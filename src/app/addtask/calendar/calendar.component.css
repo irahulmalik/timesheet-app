@@ -1,4 +1,6 @@
-
+#calendar {
+   padding-top: 10px;
+}
 div.holiday {
     -webkit-text-decoration-line: overline; 
     text-decoration-line: overline; 

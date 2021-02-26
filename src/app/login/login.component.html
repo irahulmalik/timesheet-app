@@ -5,7 +5,7 @@
       
       <hr>
       <p>Log in to use TimeSheet</p>
-      <div id="alert" class="alert alert-warning hidden" role="alert">
+      <div id="alert" *ngIf="showalert"class="alert alert-warning" role="alert">
         <strong>Warning!</strong> Wrong Username or Password.
       </div>
       <div class="form-grp">

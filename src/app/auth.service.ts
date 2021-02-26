@@ -56,15 +56,21 @@ export class AuthService {
     let username = localStorage.getItem('username')
     let uid = parseInt(localStorage.getItem("id"))
     let da = new Date
-    let today= da.getDate()
+    let today= da.getDate()+1;
     let mon = da.getMonth()
     let yea = da.getFullYear()
+    let finalDate = new Date(yea, mon, today).toISOString().split("T")
+    if (userdata.leave == true){
+      userdata.taskname = "On Leave"
+      userdata.duration = "leave"
+    }
     let workdata = {
       taskname: userdata.taskname,
       taskcategory: userdata.taskCategory,
       won: userdata.won,
       duration: userdata.duration,
-      date: new Date(yea, mon, today),
+      // date: new Date(yea, mon, today),
+      date: finalDate[0],
       leave: userdata.leave
     }
     let daaat = this.http.get(`${this.logurl}/${uid}`)

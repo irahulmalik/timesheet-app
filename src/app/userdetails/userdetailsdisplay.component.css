@@ -2,3 +2,33 @@ table{
     height: 10em;
     overflow-y: auto;
 }
+.row{
+    margin-top: 60px;
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 20px;
+}
+.butt{
+    transform: scale(1);
+    transition: all 0.4s ease-in-out;
+    border:none;
+    color:black;
+    background-color: white;
+    box-shadow: 1px 0 5px grey;
+    outline:none;
+}
+.butt:hover{
+    background-color: rgb(226, 226, 226);
+    border:none;
+}
+.butt:active{
+    /* transform: scale(1.05); */
+    border:none;
+}
+.butt:focus{
+    transform: scale(1.05);
+    border:none;
+}
+.butt:after{
+    border:none;
+}

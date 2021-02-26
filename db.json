@@ -93,7 +93,7 @@
           "taskcategory": "",
           "won": 1043,
           "duration": 9,
-          "date": "2021-02-15T18:30:00.000Z",
+          "date": "2021-02-15",
           "leave": ""
         },
         {
@@ -101,8 +101,64 @@
           "taskcategory": "",
           "won": 104,
           "duration": 4,
-          "date": "2021-02-18T18:30:00.000Z",
+          "date": "2021-02-18",
           "leave": ""
+        },
+        {
+          "taskname": "Project task",
+          "won": 102,
+          "duration": 4,
+          "date": "2021-02-26",
+          "leave": ""
+        },
+        {
+          "taskname": "Creating data",
+          "won": "1003",
+          "duration": "9",
+          "date": "2021-02-26",
+          "leave": false
+        },
+        {
+          "taskname": "Creating data",
+          "won": "1003",
+          "duration": "9",
+          "date": "2021-02-26",
+          "leave": false
+        },
+        {
+          "taskname": "Project task",
+          "won": 102,
+          "duration": 9,
+          "date": "2021-02-26",
+          "leave": ""
+        },
+        {
+          "taskname": "Leading Change",
+          "won": "1003",
+          "duration": "9",
+          "date": "2021-02-26",
+          "leave": false
+        },
+        {
+          "taskname": "Project task",
+          "won": 102,
+          "duration": 4,
+          "date": "2021-02-26",
+          "leave": ""
+        },
+        {
+          "taskname": "Leading Change",
+          "won": "1003",
+          "duration": "9",
+          "date": "2021-02-26",
+          "leave": false
+        },
+        {
+          "taskname": "Creating data",
+          "won": "1003",
+          "duration": "9",
+          "date": "2021-02-26",
+          "leave": false
         }
       ]
     },
@@ -113,9 +169,55 @@
         {
           "taskname": "Making Calendar",
           "won": "1230",
-          "date": "02/17/2021",
+          "date": "2021-02-17",
           "taskcategory": "Training and Development",
           "duration": "9",
+          "leave": true
+        },
+        {
+          "taskname": "Making Calendar",
+          "won": "1230",
+          "duration": "9",
+          "date": "2021-02-23",
+          "leave": true
+        },
+        {
+          "taskname": "Presentation",
+          "taskcategory": "Project Management",
+          "won": 1234,
+          "duration": 9,
+          "date": "2021-02-23",
+          "leave": ""
+        },
+        {
+          "taskname": "Making Calendar",
+          "won": "1230",
+          "duration": "9",
+          "date": "2021-02-23",
+          "leave": true
+        },
+        {
+          "taskname": "",
+          "taskcategory": "",
+          "won": "",
+          "duration": 9,
+          "date": "2021-02-24",
+          "leave": true
+        },
+        {
+          "taskname": "On Leave",
+          "taskcategory": "",
+          "won": "",
+          "duration": null,
+          "date": "2021-02-24",
+          "leave": true
+        },
+        {
+          "taskname": "On Leave",
+          "taskcategory": "",
+          "won": "",
+          "duration": "leave",
+          "date": "2021-02-24",
           "leave": true
         }
       ]
@@ -127,7 +229,7 @@
         {
           "taskname": "Leading Change",
           "won": "1002",
-          "date": "11/2/2021",
+          "date": "2021-02-05",
           "taskcategory": "Audit",
           "duration": "9",
           "leave": false
@@ -137,14 +239,14 @@
           "taskcategory": "Infrastructure Management",
           "won": 123,
           "duration": 9,
-          "date": "2/23/2021",
+          "date": "2021-01-18",
           "leave": ""
         },
         {
           "taskname": "Making app",
           "won": 123,
           "duration": 9,
-          "date": "2020-02-28T18:30:00.000Z",
+          "date": "2021-02-15",
           "leave": ""
         },
         {
@@ -152,7 +254,29 @@
           "taskcategory": "Defect Prevention",
           "won": 210,
           "duration": 9,
-          "date": "2020-02-28T18:30:00.000Z",
+          "date": "2021-02-16",
+          "leave": ""
+        },
+        {
+          "taskname": "New Task",
+          "taskcategory": "Infrastructure Management",
+          "won": 1043,
+          "duration": 9,
+          "date": "2021-1-24",
+          "leave": ""
+        },
+        {
+          "taskname": "Timsheet DOne",
+          "won": 210,
+          "duration": 9,
+          "date": "2021-02-22",
+          "leave": ""
+        },
+        {
+          "taskname": "Timsheet DOne",
+          "won": 210,
+          "duration": 9,
+          "date": "2021-02-22",
           "leave": ""
         }
       ]

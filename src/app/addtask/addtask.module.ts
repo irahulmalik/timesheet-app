@@ -7,7 +7,8 @@ import { CalendarComponent } from './calendar/calendar.component';
 import { FullCalendarModule } from "@fullcalendar/angular";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import  interactionPlugin  from "@fullcalendar/interaction";
-
+import {dialogComponent} from "./calendar/mydialog.component"
+import { MaterialModule } from '../material.module';
 const routes: Routes = [
     {
         path: '',
@@ -23,13 +24,15 @@ FullCalendarModule.registerPlugins([ // register FullCalendar plugins
 @NgModule({
   declarations: [
     AddtaskComponent,
-    CalendarComponent
+    CalendarComponent,
+    dialogComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
     RouterModule.forChild(routes),
-    FullCalendarModule 
+    FullCalendarModule,
+    MaterialModule
         
   ],
   exports:[RouterModule],

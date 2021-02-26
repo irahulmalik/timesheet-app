@@ -8,7 +8,7 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  public alerterror = 'hidden'
+  alerterror: boolean = false
   constructor(private auth: AuthService) { }
 
   ngOnInit(): void {
@@ -22,9 +22,9 @@ export class RegisterComponent implements OnInit {
         this.auth.newUserWork(val)
       }
     )
-    this.alerterror = 'visible'
+    this.alerterror = true
     setTimeout(() =>{
-      this.alerterror = 'hidden'
+      this.alerterror = false
       }, 3000)     
     form.reset();
     
