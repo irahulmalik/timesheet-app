@@ -64,6 +64,11 @@ const routes: Routes=[
         path: 'branch',
         component: BranchComponent,
         canActivate: [AuthGuard]
+    },
+    {
+        path: '**',
+        loadChildren: () => import('./addtask/addtask.module').then(m => m.AddTaskModule),
+        canActivate: [AuthGuard]
     }
 
 ];

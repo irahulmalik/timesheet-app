@@ -11,13 +11,15 @@ export class UserdetailsdisplayComponent implements OnInit {
   data: any;
   constructor(private route: ActivatedRoute,
     private auth: AuthService) { 
-    auth.callapi().subscribe(val => {
-      this.data = val
-    }) 
+    
   }
   id: number
   ngOnInit(): void {
     this.id = +this.route.snapshot.params['id']
+    this.auth.callapi().subscribe(val => {
+      this.data = val
+      console.log(this.data)
+    }) 
   } 
   savedata(){
       let eles = <HTMLInputElement><unknown>document.getElementsByClassName('checks');

@@ -1,4 +1,3 @@
-import { getAttrsForDirectiveMatching } from '@angular/compiler/src/render3/view/util';
 import { Component, OnInit} from '@angular/core';
 
 import { AuthService } from './auth.service';
@@ -31,6 +30,7 @@ export class AppComponent implements OnInit{
     this.auth.logChecker.subscribe(res => {
       this.loggedin = res
     })
+    console.log(this.loggedin)
   }
   // Shows and hides the loading spinner during RouterEvent changes
   navigationInterceptor(event: RouterEvent): void {

@@ -3,24 +3,25 @@
     height: 100%;
     background-image: url("https://images.unsplash.com/photo-1499377193864-82682aefed04?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1061&q=80");
     /* background-color: rgb(255, 249, 230); */
+    display: inline-block;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding-top: 30vh;
-    padding-left: 35vw;
+    padding-top: 15%;
+    padding-left: 38%;
 }
 
 .login-form{
     background-color: #fff;
     display: block;
     font-family: 'Lato';
-    display: block;
+    display: flex;
     padding: 10px;
     /* margin-top: 30vh;
     margin-left: 35vw; */
     border-radius: 10px;
-    width: 50vh;
-    justify-content: space-around;
+    width: 380px;
+    /* justify-content: space-around; */
     align-items: center;
     border: 1px solid rgb(175, 169, 169);
     box-shadow: 5px 5px 17px rgb(173, 173, 173);

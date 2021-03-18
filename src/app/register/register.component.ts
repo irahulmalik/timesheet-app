@@ -17,7 +17,9 @@ export class RegisterComponent implements OnInit {
     //  if(this.auth.registerUser(form.value) === true){
     //    alert("User added with Username:" + form.value.Username+ " & password:" + form.value.Password)
     //  }
-    this.auth.reggUser(form.value).subscribe(val =>{
+  this.auth.reggUser(form.value)
+    .subscribe(val =>{
+
         // this.auth.newUserWork(val.id , val.username)
         this.auth.newUserWork(val)
       }

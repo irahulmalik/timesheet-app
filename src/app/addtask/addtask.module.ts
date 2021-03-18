@@ -9,6 +9,7 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 import  interactionPlugin  from "@fullcalendar/interaction";
 import {dialogComponent} from "./calendar/mydialog.component"
 import { MaterialModule } from '../material.module';
+import { mydeletedialogComponent } from './calendar/mydeletedialog.component';
 const routes: Routes = [
     {
         path: '',
@@ -25,7 +26,8 @@ FullCalendarModule.registerPlugins([ // register FullCalendar plugins
   declarations: [
     AddtaskComponent,
     CalendarComponent,
-    dialogComponent
+    dialogComponent,
+    mydeletedialogComponent
   ],
   imports: [
     CommonModule,

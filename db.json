@@ -1,51 +1,21 @@
 {
   "users": [
     {
-      "id": "1",
+      "id": 1,
       "username": "Rahul",
       "password": "Malik",
       "role": "Manager"
     },
     {
-      "id": "2",
       "username": "Ray",
       "password": "Malik",
-      "role": "User"
-    },
-    {
-      "id": "3",
-      "username": "Komal",
-      "password": "Komal",
-      "role": "Manager"
-    },
-    {
-      "id": "4",
-      "username": "Aadhi",
-      "password": "Aadhi",
-      "role": "Manager"
-    },
-    {
-      "id": "5",
-      "username": "Gayatri",
-      "password": "gayatri",
-      "role": "Manager"
-    },
-    {
-      "id": "6",
-      "username": "Srinivasan",
-      "password": "srinivasan",
-      "role": "Manager"
-    },
-    {
-      "id": "8",
-      "username": "Ajay",
-      "password": "ajay",
-      "role": "User"
+      "role": "Malik",
+      "id": 2
     }
   ],
   "userdetails": [
     {
-      "id": "1",
+      "id": 1,
       "username": "Rahul",
       "workdetails": [
         {
@@ -57,297 +27,50 @@
           "leave": false
         },
         {
-          "taskname": "Creating data",
-          "won": "1003",
-          "date": "2021-02-16",
-          "taskcategory": "Talent and Development",
-          "duration": "9",
-          "leave": false
-        },
-        {
-          "taskname": "Project task",
-          "taskcategory": "Talent and Development",
-          "won": 102,
-          "duration": 4,
-          "date": "2021-02-17",
-          "leave": ""
-        },
-        {
-          "taskname": "Project task",
-          "taskcategory": "Talent and Development",
-          "won": 102,
-          "duration": 9,
-          "date": "2021-02-18",
-          "leave": ""
-        },
-        {
-          "taskname": "",
-          "taskcategory": "",
-          "won": 43234246246,
-          "duration": 9,
-          "date": "2021-2-22",
-          "leave": ""
-        },
-        {
-          "taskname": "Today",
-          "taskcategory": "",
-          "won": 1043,
-          "duration": 9,
-          "date": "2021-02-15",
-          "leave": ""
-        },
-        {
-          "taskname": "Project task",
-          "taskcategory": "",
-          "won": 104,
-          "duration": 4,
-          "date": "2021-02-18",
-          "leave": ""
-        },
-        {
-          "taskname": "Project task",
-          "won": 102,
-          "duration": 4,
-          "date": "2021-02-26",
-          "leave": ""
-        },
-        {
-          "taskname": "Creating data",
-          "won": "1003",
-          "duration": "9",
-          "date": "2021-02-26",
-          "leave": false
-        },
-        {
-          "taskname": "Creating data",
-          "won": "1003",
-          "duration": "9",
-          "date": "2021-02-26",
-          "leave": false
-        },
-        {
-          "taskname": "Project task",
-          "won": 102,
-          "duration": 9,
-          "date": "2021-02-26",
-          "leave": ""
-        },
-        {
           "taskname": "Leading Change",
           "won": "1003",
           "duration": "9",
-          "date": "2021-02-26",
+          "date": "2021-03-16",
           "leave": false
         },
         {
-          "taskname": "Project task",
-          "won": 102,
-          "duration": 4,
-          "date": "2021-02-26",
+          "taskname": "first",
+          "taskcategory": "Defect Prevention",
+          "won": 12,
+          "duration": 9,
+          "date": "2021-03-17",
           "leave": ""
-        },
-        {
-          "taskname": "Leading Change",
-          "won": "1003",
-          "duration": "9",
-          "date": "2021-02-26",
-          "leave": false
-        },
-        {
-          "taskname": "Creating data",
-          "won": "1003",
-          "duration": "9",
-          "date": "2021-02-26",
-          "leave": false
         }
+        
       ]
     },
     {
-      "id": "2",
+      "id": 2,
       "username": "Ray",
       "workdetails": [
         {
-          "taskname": "Making Calendar",
-          "won": "1230",
-          "date": "2021-02-17",
-          "taskcategory": "Training and Development",
-          "duration": "9",
-          "leave": true
-        },
-        {
-          "taskname": "Making Calendar",
-          "won": "1230",
-          "duration": "9",
-          "date": "2021-02-23",
-          "leave": true
-        },
-        {
-          "taskname": "Presentation",
-          "taskcategory": "Project Management",
-          "won": 1234,
+          "taskname": "Orientation",
+          "taskcategory": "Recruitment",
+          "won": 13,
           "duration": 9,
-          "date": "2021-02-23",
+          "date": "2021-03-16",
           "leave": ""
         },
         {
-          "taskname": "Making Calendar",
-          "won": "1230",
-          "duration": "9",
-          "date": "2021-02-23",
-          "leave": true
-        },
-        {
-          "taskname": "",
-          "taskcategory": "",
-          "won": "",
-          "duration": 9,
-          "date": "2021-02-24",
-          "leave": true
-        },
-        {
-          "taskname": "On Leave",
-          "taskcategory": "",
-          "won": "",
-          "duration": null,
-          "date": "2021-02-24",
-          "leave": true
-        },
-        {
-          "taskname": "On Leave",
-          "taskcategory": "",
-          "won": "",
-          "duration": "leave",
-          "date": "2021-02-24",
-          "leave": true
-        }
-      ]
-    },
-    {
-      "id": "3",
-      "username": "Komal",
-      "workdetails": [
-        {
-          "taskname": "Leading Change",
-          "won": "1002",
-          "date": "2021-02-05",
-          "taskcategory": "Audit",
-          "duration": "9",
-          "leave": false
-        },
-        {
-          "taskname": "Making app",
-          "taskcategory": "Infrastructure Management",
+          "taskname": "Presennt",
+          "taskcategory": "Group Mentoring",
           "won": 123,
           "duration": 9,
-          "date": "2021-01-18",
+          "date": "2021-03-17",
           "leave": ""
         },
         {
-          "taskname": "Making app",
+          "taskname": "Delete test",
+          "taskcategory": "Leading Change",
           "won": 123,
           "duration": 9,
-          "date": "2021-02-15",
+          "date": "2021-03-18",
           "leave": ""
-        },
-        {
-          "taskname": "Timsheet DOne",
-          "taskcategory": "Defect Prevention",
-          "won": 210,
-          "duration": 9,
-          "date": "2021-02-16",
-          "leave": ""
-        },
-        {
-          "taskname": "New Task",
-          "taskcategory": "Infrastructure Management",
-          "won": 1043,
-          "duration": 9,
-          "date": "2021-1-24",
-          "leave": ""
-        },
-        {
-          "taskname": "Timsheet DOne",
-          "won": 210,
-          "duration": 9,
-          "date": "2021-02-22",
-          "leave": ""
-        },
-        {
-          "taskname": "Timsheet DOne",
-          "won": 210,
-          "duration": 9,
-          "date": "2021-02-22",
-          "leave": ""
-        }
-      ]
-    },
-    {
-      "id": "4",
-      "username": "Gayatri",
-      "workdetails": [
-        {
-          "taskname": "On Leave",
-          "won": "",
-          "date": "02/14/2021",
-          "taskcategory": "",
-          "duration": "",
-          "leave": true
-        }
-      ]
-    },
-    {
-      "id": "5",
-      "username": "Aadhi",
-      "workdetails": [
-        {
-          "taskname": "On Leave",
-          "won": "",
-          "date": "02/17/2021",
-          "taskcategory": "",
-          "duration": "",
-          "leave": true
-        }
-      ]
-    },
-    {
-      "id": "6",
-      "username": "Srinivasan",
-      "workdetails": [
-        {
-          "taskname": "On Leave",
-          "won": "",
-          "date": "09/29/2020",
-          "taskcategory": "",
-          "duration": "",
-          "leave": true
-        }
-      ]
-    },
-    {
-      "id": "7",
-      "username": "Shrikant",
-      "workdetails": [
-        {
-          "taskname": "On Leave",
-          "won": "",
-          "date": "09/29/2020",
-          "taskcategory": "",
-          "duration": "",
-          "leave": true
-        }
-      ]
-    },
-    {
-      "id": "8",
-      "username": "Ajay",
-      "workdetails": [
-        {
-          "taskname": "On Leave",
-          "won": "",
-          "date": "09/29/2020",
-          "taskcategory": "",
-          "duration": "",
-          "leave": true
         }
       ]
     }

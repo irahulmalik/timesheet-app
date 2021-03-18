@@ -19,7 +19,7 @@
             </thead>
             <tbody>
               <tr *ngFor="let datas of data[id-1].workdetails; let i = index">
-                <th scope="row">{{data[i].id}}</th>
+                <th scope="row">{{i+1}}</th>
                 <!-- <td>{{data[id].username}}</td> -->
                 <td>{{data[id-1].workdetails[i].taskname}}</td>
                 <td>{{data[id-1].workdetails[i].taskcategory}}</td>
@@ -32,11 +32,8 @@
             </tbody>
           </table>
           <button 
-          class="btn btn-success butt"
-          style="align-items: center;
-          margin-left: 50vw;
-          margin-top: 20px;
-          "
+          mat-flat-button color="primary"
+          style="align-items: center;"
           (click)="savedata()">Approve</button>
     </div>
 </div>

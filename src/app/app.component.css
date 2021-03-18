@@ -4,7 +4,9 @@
 .main {
     /* background-color: rgb(255, 249, 230); */
     /* background-color: #f1e4e1; */
-    background-color: #fffbfb;
+    /* background-color: #fffbfb; */
+    background-image: url(../assets/double-bubble-outline.png);
+    /* background: linear-gradient(to bottom,#fffbfb, #faffff ); */
     padding: 0;
     margin:0;
     width: 100%;

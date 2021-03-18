@@ -4,6 +4,8 @@ import { Routes,RouterModule } from "@angular/router";
 import { UserdetailsComponent } from './userdetails.component';
 import { UserdetailsdisplayComponent } from './userdetailsdisplay.component';
 import { CommonModule } from '@angular/common';
+import { deleteComponent } from './delete.component';
+import { MaterialModule } from '../material.module';
 
 const routes: Routes = [
     {
@@ -23,11 +25,13 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     UserdetailsComponent,
-    UserdetailsdisplayComponent
+    UserdetailsdisplayComponent,
+    deleteComponent
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    MaterialModule
         
   ],
   exports:[RouterModule],

@@ -1,6 +1,7 @@
 import { Component,  OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Subject } from 'rxjs';
 import { AuthService } from '../auth.service';
 import { task } from '../models/tasks';
 import { UsertaskService } from '../usertask.service';
@@ -13,6 +14,7 @@ import { UsertaskService } from '../usertask.service';
 })
 export class AddtaskComponent implements OnInit {
   // tasks: task[] = [];
+  triggercalendar: Subject<void> = new Subject();
   data: any;
   showAlert: boolean = false;
   constructor(private auth: AuthService,
@@ -69,6 +71,7 @@ export class AddtaskComponent implements OnInit {
   //addfunction that adds work details
   onaddtask(form: NgForm){
     console.log(form.value)
+    this.triggercalendar.next()
     this.auth.addtask(form.value)
         this.showAlert = true;
         setTimeout(() =>{
@@ -77,6 +80,7 @@ export class AddtaskComponent implements OnInit {
       this.usertask.getdata().subscribe(val =>{
         this.data = val
       })
+      this.ngOnInit()
   }
   clearInfo(form: NgForm){
     form.reset()
@@ -89,7 +93,8 @@ export class AddtaskComponent implements OnInit {
         this.showAlert = true;
         setTimeout(() =>{
         this.showAlert = false
-        this.router.navigate(['addtask'])
+        // this.router.navigate(['addtask'])
+          this.ngOnInit()
         }, 3000)
 
   }

@@ -1,10 +1,10 @@
 import { Component, Inject } from "@angular/core";
 import { MAT_DIALOG_DATA } from "@angular/material/dialog";
-import {MatDialogModule} from "@angular/material/dialog"
+
 
 @Component({
     selector: "app-dialog",
-    template:`<h1 mat-dialog-title>Do You want to copy this data</h1>
+    template:`<h1 mat-dialog-title>Do you want to copy this data?</h1>
     <mat-dialog-content *ngIf="(passedData.workdetails == undefined)">
         <p>No data present</p>
     </mat-dialog-content>

@@ -6,17 +6,22 @@ import {MatTableModule} from '@angular/material/table';
 import { MatButtonModule } from "@angular/material/button";
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatDialogModule} from '@angular/material/dialog';
-
+import {MatSelectModule} from '@angular/material/select';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
+// import { MatMomentDateModule } from "@angular/material-moment-adapter";
 
 const materials = 
-[
+[   MatSelectModule,
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,
     MatTableModule,
     MatButtonModule,
     MatProgressSpinnerModule,
-    MatDialogModule
+    MatDialogModule,
+    MatDatepickerModule,
+    MatNativeDateModule
 ]
 @NgModule({
     imports:[

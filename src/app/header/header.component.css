@@ -3,6 +3,7 @@ nav{
     z-index: 1;
     width:100%;
 }
+
 .manage {
     display: none;
     color:white;
@@ -20,15 +21,15 @@ nav{
     box-shadow: 1px 0 10px gray;
 }
 .navbar-header a{
-    transition: all 0.4s;
+    transition: all 0.2s;
     transform: scale(1);
     color: white;
 }
 
 .navbar-header a:hover{
-    transform: scale(1.05);
-    background-color: #e4e8fa;
-    color: black;
+    transform: scale(1.02);
+    /* background-color: #faffff; */
+    /* color: black; */
 }
 
 .navbar-header a.active{
@@ -43,12 +44,12 @@ nav{
 }
 .navbar-link a:hover{
     transform:scale(1.05);
-    background-color: #e4e8fa;
+    background-color: #faffff;
     color: black;
 
 }
 .navbar-link a.active{
-    background-color: #e4e8fa;
+    background-color: #faffff;
     color: black;
 }
 

@@ -31,7 +31,19 @@ export class AuthService {
       password: pass,
       role: Role
     }
-   
+  // return this.http.get(`${this.logurl}/?username=${userdata.Username}`).subscribe(val =>{
+  //   console.log(val[0])
+  //   // if(val[0].hasOwnProperty('username')){
+  //   if(val[0] == "undefined"){
+  //     console.log("F")  
+  //     return false
+  //   }else{
+  //     console.log("creating User")
+  //     return true
+  //   }
+  // })
+
+    
     return this.http.post(this.loginurl, NewUser)
   }
 
@@ -54,7 +66,8 @@ export class AuthService {
   addtask(userdata){
     //adds task to db
     let username = localStorage.getItem('username')
-    let uid = parseInt(localStorage.getItem("id"))
+    let uid = localStorage.getItem("id")
+    console.log(uid)
     let da = new Date
     let today= da.getDate()+1;
     let mon = da.getMonth()
