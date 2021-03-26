@@ -1,4 +1,4 @@
-<div class="row">
+<!-- <div class="row">
     <div class="col-xs-12 col-md-12 col-xl-12">
 <nav class="navbar">
     <div class="container-fluid">
@@ -13,7 +13,7 @@
                     <li><a routerLink="/addtask"><i class="fas fa-plus"></i> Add Task</a></li>
                     <li><a routerLink="/branch"><i class="fas fa-home"></i> Branch</a></li>
                     <li><a class="nav-link" *ngIf="role ==='Manager'" routerLink="/register" routerLinkActive="active"><i class="fas fa-user-plus"></i> Register New User</a></li>
-                    <li><a class="nav-link" *ngIf="role ==='Manager'" routerLink="/userDetails" routerLinkActive="active"><i class="fas fa-users"></i> User Details</a></li>
+                    <li><a class="nav-link" *ngIf="role ==='Manager'" routerLink="/userDetails" routerLinkActive="active"><i class="fas fa-users"></i> Apply Leave</a></li>
                     <li><a routerLink="/login" role="button" (click)="onLogout()"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
                 </ul>
             </li>
@@ -22,7 +22,7 @@
             <li><a routerLink="/login" role="button" (click)="onLogout()"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right navbar-link menu">
-            <li><a routerLink="/branch" routerLinkActive="active"><i class="fas fa-home"></i> Your Branch</a></li>
+            <li><a routerLink="/branch" routerLinkActive="active"><i class="fas fa-home"></i> Apply Leave</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right navbar-link menu" >
             <li><a class="nav-link" *ngIf="role ==='Manager'" routerLink="/register" routerLinkActive="active"><i class="fas fa-user-plus"></i> Register New User</a></li>
@@ -37,13 +37,58 @@
         
        
     </div>
-    <!-- <div class="navbar side-nav">
+    <div class="navbar side-nav">
         <ul>
             <li>Branch</li>
         </ul>
     </div> -->
-</div>
-</nav>
-</div>
-</div>
+<!-- </x -->
 
+<div class="container"  *ngIf = "islogedIn == true">
+    <nav class="navbar desktop">
+        <div class="navbar-header">
+            <ul>
+                <li><a class="navbar-brand">TimeSheet</a></li>
+            </ul>
+        </div>
+        <div class="navbar-links">
+            <ul class="nav navbar-nav navbar-right navbar-link menu">
+                <li><a routerLink="/login" role="button" (click)="onLogout()"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right navbar-link menu">
+                <li><a routerLink="/branch" routerLinkActive="active"><i class="fas fa-home"></i> Apply Leave</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right navbar-link menu" >
+                <li><a class="nav-link" *ngIf="role ==='Manager'" routerLink="/register" routerLinkActive="active"><i class="fas fa-user-plus"></i> Register New User</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right menu navbar-link" *ngIf="role ==='Manager'">
+                <li><a class="nav-link" routerLink="/userDetails" routerLinkActive="active"><i class="fas fa-users"></i> User Details</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right navbar-link menu">
+                <li><a routerLink="/addtask" routerLinkActive="active"><i class="fas fa-plus"></i> Add Task</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav class="navbar mobile">
+        <div class="navbar-header">
+            <ul class="nav">
+                <li><a routerLink="/addtask" routerLinkActive="active" class="navbar-brand">TimeSheet</a></li>
+            </ul>
+            <div class="example-spacer"></div>
+            <ul class="nav">
+                <li class="dropdown" appDropdown>
+                    <a role="button" class="dropdown-toggle manage" data-toggle="dropdown">Manage<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu" open>
+                        <li><a routerLink="/addtask"><i class="fas fa-plus"></i> Add Task</a></li>
+                        <li><a routerLink="/branch"><i class="fas fa-home"></i> Apply Leave</a></li>
+                        <li><a class="nav-link" *ngIf="role ==='Manager'" routerLink="/register" routerLinkActive="active"><i class="fas fa-user-plus"></i> Register New User</a></li>
+                        <li><a class="nav-link" *ngIf="role ==='Manager'" routerLink="/userDetails" routerLinkActive="active"><i class="fas fa-users"></i> User Details</a></li>
+                        <li><a routerLink="/login" role="button" (click)="onLogout()"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+
+    </nav>
+</div>

@@ -73,14 +73,14 @@ export class AddtaskComponent implements OnInit {
     console.log(form.value)
     this.triggercalendar.next()
     this.auth.addtask(form.value)
-        this.showAlert = true;
-        setTimeout(() =>{
-          this.showAlert = false
-        }, 3000)
-      this.usertask.getdata().subscribe(val =>{
-        this.data = val
-      })
-      this.ngOnInit()
+    this.showAlert = true;
+    setTimeout(() =>{
+      this.showAlert = false
+    }, 3000)
+    this.usertask.getdata().subscribe(val =>{
+      this.data = val
+    })
+    this.ngOnInit()
   }
   clearInfo(form: NgForm){
     form.reset()

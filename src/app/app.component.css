@@ -50,7 +50,7 @@ footer {
         
         padding: 0;
         margin:0;
-        width: fit-content;
+        width: max-content;
         height:max-content;
         transition: translateY(100px) 1s ease-in;
     }

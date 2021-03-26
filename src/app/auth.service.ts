@@ -65,7 +65,6 @@ export class AuthService {
 
   addtask(userdata){
     //adds task to db
-    let username = localStorage.getItem('username')
     let uid = localStorage.getItem("id")
     console.log(uid)
     let da = new Date
@@ -118,5 +117,32 @@ export class AuthService {
   //deletes user of given id
   this.http.delete(`${this.logurl}/${id}`).subscribe(res=>{console.log("deleted")})
   return this.http.delete(`${this.loginurl}/${id}`)
+  }
+
+  leaveapply(userdata){
+    //apply for leave
+    console.log("callled",userdata)
+    let uid = localStorage.getItem("id")
+    if (userdata.leave == true){
+      // userdata.taskname = "On Leave"
+      userdata.duration = "leave"
+    }
+    let workdata =userdata
+    let daaat = this.http.get(`${this.logurl}/${uid}`)
+    let usedata: any;
+    daaat.subscribe(val => {
+      usedata = val
+      usedata.workdetails.push(workdata)
+      let uploaddata = {
+        "workdetails": 
+          usedata.workdetails
+      }
+      //calling patch
+      let sentreq = this.http.patch(`${this.logurl}/${uid}`,uploaddata)
+      sentreq.subscribe(val =>{
+        return true
+      })
+      return true
+    })
   }
 }

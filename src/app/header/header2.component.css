@@ -1,0 +1,91 @@
+.container{
+    margin:0;
+    padding:0;
+    width: 100%;
+    /* display: flex;
+    flex: 1 1 auto; */
+    position: fixed;
+    z-index: 100;
+    top:0;
+}
+
+.desktop{
+    width: 100%;
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    top:0;
+    background-color: rgb(129, 129, 241);
+    border: none;
+    border-radius: 0;
+    box-shadow: 1px 0 10px gray;
+    z-index: 100;
+}
+.desktop a{
+    color:white;
+    transition: all 0.2s;
+    transform: scale(1);
+}
+.desktop a:hover{
+    transform: scale(1.02);
+    background-color: rgb(190, 190, 248);
+    color:#000;
+}
+.desktop .navbar-links{
+    margin-right: 10px;
+}
+.mobile{
+    display: none;
+}
+@media screen and (max-width:775px){
+    .desktop{
+        display: none;
+    }
+    .mobile{
+        display: flex;
+        /* flex: 1 1 auto; */
+        /* vertical-align: middle; */
+        width: 100%;
+        /* position: fixed; */
+        margin: 0;
+        padding: 10px 0 0 10px;
+        top:0;
+        background-color: rgb(129, 129, 241);
+        border: none;
+        border-radius: 0;
+        box-shadow: 1px 0 10px gray;
+        z-index: 100;
+        /* align-items: center;/ */
+
+    }
+    .mobile a{
+        color:white;
+        /* margin-top: 30px; */
+        padding-top: 10px;
+    }
+    .mobile li{
+        list-style: none;
+    }
+    .navbar-brand{
+        margin:0;
+        padding:0;
+    }
+    .dropdown-menu{
+        margin: 0 0 0 -75px;
+    }
+    .dropdown-menu a{
+        color: #000;
+    }
+    .navbar-header{
+        display: flex;
+        flex: 1 1 auto;
+        /* padding: 10px; */
+        margin-right: 10px;
+        vertical-align: middle;
+        justify-content: space-between;
+    }
+    .example-spacer{
+        display: flex;
+        flex: 1 1 auto;
+    }
+}

@@ -24,26 +24,33 @@
 <div class="container">
     <h1>Apply for leave</h1>
     <form class="myform" [formGroup]='range'>
+      <div class="myalert" *ngIf="alert">
+        <p>LEAVE APPLIED</p>
+      </div>
+      <!-- <div id="alert" *ngIf="alert" class="alert alert-success" role="alert">
+        <strong>Success!</strong> Data Added.
+      </div> -->
     <mat-form-field>
             <mat-label>Reason</mat-label>
-            <mat-select formControlName="sickReason">
-              <mat-option value="maternity">maternity</mat-option>
+            <mat-select formControlName="sickReason" required>
+              <mat-option value="maternity">Maternity Leave</mat-option>
               <mat-option value="sick leave">Sick Leave</mat-option>
               <mat-option value="casual leave">Casual Leave</mat-option>
+              <mat-option value="casual leave">Earned Leave</mat-option>
             </mat-select>
           </mat-form-field>
           <mat-form-field>
             <mat-label>From</mat-label>
-  <input matInput [matDatepicker]="startpicker" formControlName="start">
+  <input matInput [matDatepicker]="startpicker" formControlName="start" required>
   <mat-datepicker-toggle matSuffix [for]="startpicker"></mat-datepicker-toggle>
   <mat-datepicker #startpicker></mat-datepicker>
          </mat-form-field> 
           <mat-form-field>
             <mat-label>To</mat-label>
-  <input matInput [matDatepicker]="endpicker" formControlName="end">
+  <input matInput [matDatepicker]="endpicker" formControlName="end" required>
   <mat-datepicker-toggle matSuffix [for]="endpicker"></mat-datepicker-toggle>
   <mat-datepicker #endpicker></mat-datepicker>
          </mat-form-field> 
-          <button mat-flat-button color="primary" (click)="leave()"type="submit">Submit</button>
+          <button mat-flat-button color="primary" (click)="leave()"type="submit" [disabled]="range.invalid">Submit</button>
     </form>
 </div> 

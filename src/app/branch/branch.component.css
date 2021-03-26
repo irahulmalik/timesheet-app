@@ -16,7 +16,7 @@ form button{
     margin-top: 70px;
 }
 .container{
-    margin: 70px 0 0 8%;
+    margin: 50px 0 0 8%;
     padding: 0;
     height:600px;
     width: 1200px;
@@ -43,10 +43,16 @@ mat-form-field{
 button{
     width: 20%;
 }
+.myalert{
+    background-color: rgb(161, 226, 161);
+    padding: 10px;
+    height: 40px;
+    width: 20%;
+}
 
 @media screen and (max-width: 745px){
     .container{
-        margin: 100px 0 0 0;
+        margin: 60px 0 0 0;
     padding: 0;
     height:fit-content;
     width: 100%;
@@ -60,6 +66,13 @@ box-shadow: 0px 0px 4px 2px rgba(227,227,227,0.35);
         width: 80%;
     }
     button{
+        width: 80%;
+    }
+    .myalert{
+        background-color: rgb(161, 226, 161);
+        margin-bottom: 10px;
+        padding: 10px;
+        height: 40px;
         width: 80%;
     }
 }
