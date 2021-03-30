@@ -11,6 +11,18 @@
       "password": "Malik",
       "role": "Malik",
       "id": 2
+    },
+    {
+      "username": "user1",
+      "password": "user1",
+      "role": "User",
+      "id": 3
+    },
+    {
+      "username": "manager1",
+      "password": "manager1",
+      "role": "Manager",
+      "id": 4
     }
   ],
   "userdetails": [
@@ -48,6 +60,14 @@
           "duration": 9,
           "date": "2021-03-26",
           "leave": ""
+        },
+        {
+          "taskname": "Presentation",
+          "taskcategory": "Audits",
+          "won": 123,
+          "duration": 9,
+          "date": "2021-03-30",
+          "leave": ""
         }
       ]
     },
@@ -84,6 +104,42 @@
           "won": 13,
           "duration": 9,
           "date": "2021-03-23",
+          "leave": ""
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "username": "user1",
+      "workdetails": [
+        {
+          "taskname": "Sup",
+          "taskcategory": "Infrastructure Management",
+          "won": 91,
+          "duration": 1,
+          "date": "2021-03-30",
+          "leave": ""
+        },
+        {
+          "taskname": "leave",
+          "leave": true,
+          "duration": "leave",
+          "won": "",
+          "taskcategory": "casual leave",
+          "date": "2021-04-01"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "username": "manager1",
+      "workdetails": [
+        {
+          "taskname": "clear stuff",
+          "taskcategory": "Infrastructure Management",
+          "won": 123,
+          "duration": 9,
+          "date": "2021-03-30",
           "leave": ""
         }
       ]

@@ -76,9 +76,9 @@ export class CalendarComponent implements OnInit{
       }
       //
       let b = this.today.toISOString().split("T")
-      if(arg.dateStr == b[0]){
+      if(arg.dateStr > b[0]){
         console.log("sup")
-        alert("cant copy todays timesheet")
+        alert("some other day in future")
         // const dialogRef= this.dialog.open(mydeletedialogComponent)
         // dialogRef.afterClosed().subscribe(val=>{
         //   if(val){
@@ -87,6 +87,9 @@ export class CalendarComponent implements OnInit{
         //     console.log('delete false')
         //   }
         // })
+      }else if(arg.dateStr == b[0]){
+        console.log("same date")
+        alert("cant copy todays timesheet")
       }else{
         const dialogRef = this.dialog.open(dialogComponent, {data:{
           workdetails: this.userWorkDetailsmy //workdetails

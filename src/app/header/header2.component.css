@@ -31,6 +31,11 @@
     background-color: rgb(190, 190, 248);
     color:#000;
 }
+.desktop a.active{
+    transform: scale(1.02);
+    background-color: rgb(190, 190, 248);
+    color:#000;
+}
 .desktop .navbar-links{
     margin-right: 10px;
 }
